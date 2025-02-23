@@ -1,0 +1,176 @@
+/*CSS de la page d'offre pour le projet dev web à CESI*/
+
+html, body 
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header
+{
+    width: 100%;
+    height: 15%;
+    /*background-color: #aaaaaa;*//*pour debugger*/
+}
+
+.flex_container {display: flex;}
+
+#flex_container_1
+{
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    /*background-color: #777777;*//*pour debugger*/
+}
+
+#a_logo {margin-left: 2%;}
+
+#logo
+{
+    width: 18vh;
+    height: 13vh;
+}
+
+#flex_container_2
+{
+    width: 40%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    /*background-color: #bb7777;*//*pour debugger*/
+}
+
+.lien {text-decoration: none;}
+
+#flex_container_3
+{
+    margin-right: 2%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    /*background-color: #77bb77;*//*pour debugger*/
+}
+
+#profil
+{
+    /*display: none;*//*pour debugger*/
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #cccc00;
+}
+
+#nom {font-size: 2vh;}
+
+#prenom {font-size: 2vh;}
+
+#connexion {display: none;}
+
+#bouton_burger_1, #bouton_burger_2 {font-size: 50px; cursor: pointer; /*background-color: aquamarine;*//*pour debugger*/}
+
+#lien_profil_1
+{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    right: 8%;
+    padding: 2vh;
+    gap: 2vh;
+    border-radius: 2.5%;
+    outline-style: solid;
+    outline-width: 0.3vh;
+    border: #000000;
+    background-color: #ffffff;
+    z-index: 2;
+}
+
+#lien_profil_1 a {
+    display: block;
+    width: max-content;
+    text-align: center;
+}
+
+#x_1, #x_2
+{
+    display: none;
+    right: 0%;
+    font-size: 4vh;
+    align-self: flex-end;
+    cursor: pointer;
+    /*background-color: blueviolet;*//*pour debugger*/
+}
+
+#nom_prenom_lien_profil_1
+{
+    margin-top: -1vh;
+}
+
+#lien_burger_2
+{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    right: 2%;
+    padding: 2vh;
+    gap: 2vh;
+    border-radius: 5%;
+    outline-style: solid;
+    outline-width: 0.3vh;
+    border: #000000;
+    background-color: #ffffff;
+    z-index: 2;
+}
+
+#lien_burger_2 a {
+    display: block;
+    width: max-content;
+    text-align: center;
+    /*background-color: chartreuse;*//*pour debugger*/
+}
+
+#lien_burger_3
+{
+    display: none;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+#bouton_burger_2 
+{
+    display: none; 
+    margin-top: 0vh;
+    margin-left: 3%;
+}
+
+@media only screen and (max-width: 899px)
+{
+    /*body {background-color: red;}*//*pour debugger*/
+    #flex_container_2 {display: none;}
+
+    #lien_profil_1, #lien_burger_2
+    {
+        top: 0%;
+        right: 0%;
+        width: 80%;
+        border-radius: 0%;
+        font-size: 3vh;
+        gap: 4vh;
+    }
+
+    #x_1, #x_2 {display: flex;}
+    #lien_burger_3 {display: flex; gap: 4vh;}
+}
+
+@media only screen and (max-width: 699px)
+{
+    /*body {background-color: #0000ff;}*//*pour debugger*/
+    header {height: auto;}
+    #bouton_burger_1 {display: none;}
+    #bouton_burger_2 {display: block; margin-bottom: -1vh;}
+}
