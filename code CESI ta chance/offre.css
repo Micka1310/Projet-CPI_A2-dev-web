@@ -13,7 +13,7 @@ header
 {
     width: 100%;
     height: 15%;
-    /*background-color: #aaaaaa;*//*pour debugger*/
+    /*background-color: #aaaaaa;*/ /*pour debugger*/
 }
 
 .flex_container {display: flex;}
@@ -23,7 +23,7 @@ header
     height: 100%;
     align-items: center;
     justify-content: space-between;
-    /*background-color: #777777;*//*pour debugger*/
+    /*background-color: #777777;*/ /*pour debugger*/
 }
 
 #a_logo {margin-left: 2%;}
@@ -41,7 +41,7 @@ header
     justify-content: center;
     align-items: center;
     gap: 50px;
-    /*background-color: #bb7777;*//*pour debugger*/
+    /*background-color: #bb7777;*/ /*pour debugger*/
 }
 
 .lien {text-decoration: none;}
@@ -53,12 +53,11 @@ header
     justify-content: space-between;
     align-items: center;
     gap: 40px;
-    /*background-color: #77bb77;*//*pour debugger*/
+    /*background-color: #77bb77;*/ /*pour debugger*/
 }
 
 #profil
 {
-    /*display: none;*//*pour debugger*/
     width: 10vh;
     height: 10vh;
     border-radius: 50%;
@@ -76,9 +75,7 @@ header
 
 #lien_profil_1
 {
-    display: none;/*
-    position: absolute;
-    flex-direction: column;*/
+    display: none;
     right: 8%;
     padding: 2vh;
     gap: 2vh;
@@ -90,11 +87,6 @@ header
     z-index: 2;
 }
 
-/*#lien_profil_1.affiche
-{
-
-}*/
-
 #lien_profil_1 a 
 {
     display: block;
@@ -105,11 +97,8 @@ header
 #x_1, #x_2
 {
     display: none;
-    /*position: absolute;*/
-    /*right: 5%;*/
     width: max-content;
     font-size: 4vh;
-    /*align-self: flex-end;*/
     cursor: pointer;
     /*background-color: blueviolet;*//*pour debugger*/
 }
@@ -121,9 +110,6 @@ header
 
 #lien_burger_2
 {
-    /*display: none;
-    position: absolute;
-    flex-direction: column;*/
     right: 2%;
     padding: 2vh;
     gap: 2vh;
@@ -139,20 +125,14 @@ header
     display: block;
     width: max-content;
     text-align: center;
-    /*background-color: chartreuse;*//*pour debugger*/
+    /*background-color: chartreuse;*/ /*pour debugger*/
 }
-
-/*#lien_burger_2.affiche
-{
-
-}*/
 
 #lien_profil_1, #lien_burger_2
 {
     display: none;
     position: absolute;
     flex-direction: column;
-    /*transition: width 0.5s ease;*/
     transition: transform 0.5s ease;
 }
 
@@ -172,7 +152,7 @@ header
 
 @media only screen and (max-width: 899px)
 {
-    /*body {background-color: red;}*//*pour debugger*/
+    /*body {background-color: red;}*/ /*pour debugger*/
     #flex_container_2 {display: none;}
 
     #lien_profil_1, #lien_burger_2
@@ -180,10 +160,7 @@ header
         display: flex;
         position: fixed;
         top: 0%;
-        /*right: 0%;*/
         right: 0%;
-        /*width: 0%;*/
-        /*padding: 0%;*/
         width: 80%;
         border-radius: 0%;
         font-size: 3vh;
@@ -197,7 +174,7 @@ header
 
 @media only screen and (max-width: 699px)
 {
-    /*body {background-color: #0000ff;}*//*pour debugger*/
+    /*body {background-color: #0000ff;}*/ /*pour debugger*/
     header {height: auto;}
     #bouton_burger_1 {display: none;}
     #bouton_burger_2 {display: block; margin-bottom: -1vh;}
