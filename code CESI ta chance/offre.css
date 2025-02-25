@@ -76,9 +76,9 @@ header
 
 #lien_profil_1
 {
-    display: none;
+    display: none;/*
     position: absolute;
-    flex-direction: column;
+    flex-direction: column;*/
     right: 8%;
     padding: 2vh;
     gap: 2vh;
@@ -90,7 +90,13 @@ header
     z-index: 2;
 }
 
-#lien_profil_1 a {
+/*#lien_profil_1.affiche
+{
+
+}*/
+
+#lien_profil_1 a 
+{
     display: block;
     width: max-content;
     text-align: center;
@@ -99,9 +105,11 @@ header
 #x_1, #x_2
 {
     display: none;
-    right: 0%;
+    /*position: absolute;*/
+    /*right: 5%;*/
+    width: max-content;
     font-size: 4vh;
-    align-self: flex-end;
+    /*align-self: flex-end;*/
     cursor: pointer;
     /*background-color: blueviolet;*//*pour debugger*/
 }
@@ -113,9 +121,9 @@ header
 
 #lien_burger_2
 {
-    display: none;
+    /*display: none;
     position: absolute;
-    flex-direction: column;
+    flex-direction: column;*/
     right: 2%;
     padding: 2vh;
     gap: 2vh;
@@ -132,6 +140,20 @@ header
     width: max-content;
     text-align: center;
     /*background-color: chartreuse;*//*pour debugger*/
+}
+
+/*#lien_burger_2.affiche
+{
+
+}*/
+
+#lien_profil_1, #lien_burger_2
+{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    /*transition: width 0.5s ease;*/
+    transition: transform 0.5s ease;
 }
 
 #lien_burger_3
@@ -155,12 +177,18 @@ header
 
     #lien_profil_1, #lien_burger_2
     {
+        display: flex;
+        position: fixed;
         top: 0%;
+        /*right: 0%;*/
         right: 0%;
+        /*width: 0%;*/
+        /*padding: 0%;*/
         width: 80%;
         border-radius: 0%;
         font-size: 3vh;
         gap: 4vh;
+        transform: translateX(100%);
     }
 
     #x_1, #x_2 {display: flex;}
