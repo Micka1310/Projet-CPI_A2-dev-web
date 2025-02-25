@@ -1,3 +1,5 @@
+/*JS de la page d'offre pour le projet dev web à CESI*/
+
 const bouton_burger_1 = document.getElementById("bouton_burger_1");
 const bouton_burger_2 = document.getElementById("bouton_burger_2");
 const lien_burger_2 = document.getElementById("lien_burger_2");
@@ -8,6 +10,7 @@ const bouton_x_2 = document.getElementById("x_2");
 
 let profil_afficher = false;
 let lien_afficher = false;
+
 
 /*pour faire apparaître/disparaitre les liens secondaires du bouton burger 
 en appuyant sur le bouton burger (dekstop)*/
