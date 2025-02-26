@@ -31,7 +31,6 @@ function clique_burger_1()
         else
         {
             lien_burger_2.style.transform = "translateX(0%)";
-            /*bouton_x_2.style.display = "flex";*/
             lien_afficher = true;
             console.log("fonction clique_burger_1 : boucle if (lien_afficher == false) -> boucle else");
         }
@@ -45,13 +44,6 @@ function clique_burger_1()
             lien_afficher = false;
             console.log("fonction clique_burger_1 : boucle else -> boucle if (window.innerWidth > 899)");
         }
-
-        /*else
-        {
-            lien_burger_2.style.right = "-85%";
-            lien_afficher = false;
-            console.log("fonction clique_burger_1 : boucle else -> boucle else");
-        }*/
     }
 }
 
