@@ -1,4 +1,4 @@
-/*CSS de la page d'offre pour le projet dev web à CESI*/
+/*CSS de l'en-tete pour le projet dev web à CESI*/
 
 *
 {
@@ -205,28 +205,6 @@ header
     margin-top: 0vh;
     margin-left: 3%;
 }
-
-#section_recherche_1 {position: relative; top: 15%;}
-
-#section_recherche_2
-{
-    justify-content: center;
-    align-items: center;
-    background-color: #0055cc;
-}
-
-#barre_recherche
-{
-    height: 5vh;
-    width: 60vh;
-    padding: 15px;
-    border-radius: 20px;
-    border: 2px solid #aaaaaa;
-}
-
-#bouton_recherche {height: max-content; width: max-content;}
-
-#loupe_recherche {height: 5vh; width: 5vh;}
 
 @media only screen and (max-width: 899px)
 {
