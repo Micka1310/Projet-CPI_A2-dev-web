@@ -215,12 +215,12 @@ header
     background-color: #0055cc;
 }
 
-#barre_recherche
+#barre_recherche_offre, #barre_recherche_lieu
 {
     height: 5vh;
-    width: 60vh;
-    padding: 15px;
-    border-radius: 20px;
+    width: 40vh;
+    padding: 20px;
+    /*border-radius: 20px;*/
     border: 2px solid #aaaaaa;
 }
 

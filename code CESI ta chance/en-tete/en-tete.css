@@ -25,6 +25,8 @@ header
     /*background-color: #aaaaaa;*/ /*pour debugger*/
 }
 
+a:hover {color: #ff5500;}
+
 .flex_container {display: flex;}
 
 #flex_container_1
@@ -115,6 +117,8 @@ header
 #connexion {display: none;}
 
 #bouton_burger_1, #bouton_burger_2 {font-size: 50px; cursor: pointer; /*background-color: aquamarine;*//*pour debugger*/}
+
+#bouton_burger_1:hover, #bouton_burger_2:hover {color: #ff5500;}
 
 #lien_profil_1
 {
