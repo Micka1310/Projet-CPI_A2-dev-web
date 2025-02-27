@@ -39,11 +39,7 @@ a:hover {color: #ff5500;}
 
 #a_logo {margin-left: 10%; /*background-color: #55bb00;*/ /*pour debugger*/}
 
-#logo
-{
-    width: 18vh;
-    height: 13vh;
-}
+#logo {width: 18vh; height: 13vh;}
 
 #flex_container_2
 {
@@ -68,15 +64,21 @@ a:hover {color: #ff5500;}
     /*background-color: #77bb77;*/ /*pour debugger*/
 }
 
-#profil
+#profil_1, #profil_2
 {
     display: flex;
-    /*position: relative;*/
-    width: 10vh;
-    height: 10vh;
     border-radius: 50%;
     cursor: pointer;
     background-color: #cccc00;
+}
+
+#profil_1 {width: 10vh; height: 10vh;}
+
+#profil_2 
+{
+    display: none;
+    width: 8vh; 
+    height: 8vh;
 }
 
 .tooltip {display: inline-block;}
@@ -116,7 +118,17 @@ a:hover {color: #ff5500;}
 
 #connexion {display: none;}
 
-#bouton_burger_1, #bouton_burger_2 {font-size: 50px; cursor: pointer; /*background-color: aquamarine;*//*pour debugger*/}
+#bouton_burger_1 {font-size: 50px; cursor: pointer; /*background-color: aquamarine;*//*pour debugger*/}
+
+#bouton_burger_2 
+{
+    display: none; 
+    /*margin-top: 0vh;*/
+    margin-right: 2%;
+    font-size: 6vh;
+    cursor: pointer;
+    background-color: #00aaff;
+}
 
 #bouton_burger_1:hover, #bouton_burger_2:hover {color: #ff5500;}
 
@@ -203,13 +215,6 @@ a:hover {color: #ff5500;}
     /*background-color: #bbbb00;*/ /*pour debugger*/
 }
 
-#bouton_burger_2 
-{
-    display: none; 
-    margin-top: 0vh;
-    margin-left: 3%;
-}
-
 @media only screen and (max-width: 899px)
 {
     /*body {background-color: red;}*/ /*pour debugger*/
@@ -237,6 +242,10 @@ a:hover {color: #ff5500;}
 {
     /*body {background-color: #0000ff;}*/ /*pour debugger*/
     header {height: auto;}
-    #bouton_burger_1 {display: none;}
-    #bouton_burger_2 {display: block; margin-bottom: -1vh;}
+    #logo {width: 13vh; height: 9vh;}
+    #flex_container_3 {display: none;}
+    #profil_1 {width: 6vh; height: 6vh;}
+    #bouton_burger_1 {font-size: 30px;}
+    #profil_2 {display: flex;}
+    #bouton_burger_2 {display: flex;}
 }

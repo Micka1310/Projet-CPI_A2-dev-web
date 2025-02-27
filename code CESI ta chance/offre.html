@@ -35,7 +35,7 @@
                 </div>
                 
                 <div class="flex_container" id="flex_container_3">
-                    <div class="tooltip" id="profil">
+                    <div class="tooltip" id="profil_1">
                         <span class="tooltip_text_gauche" id="tooltip_profil">Vous êtes connecté</span>
                     </div>
 
@@ -47,6 +47,10 @@
                         <span class="tooltip_text_gauche" id="tooltip_burger">Liens de navigation</span>
                     </p>
                 </div>
+
+                <!--bouton burger et profil (mobile)-->
+                <div id="profil_2"></div>
+                <span id="bouton_burger_2"><b>☰</b></span>
             </div>
 
             <!--affichage du nom/prenom et option de deconnexion apres appuie sur le profil-->
@@ -83,18 +87,18 @@
                     </nav>
                 </div>
             </div>
-
-            <!--bouton burger (mobile)-->
-            <p id="bouton_burger_2"><b>☰</b></p>
-
         </header>
 
-        <!--barre de recherche pour les offres-->
-        <section id="section_recherche_1">
+        <!--barres de recherche pour les offres-->
+        <section id="section_recherche">
             <form action="#" method="get">
-                <div class="flex_container" id="section_recherche_2">
-                    <div class="flex_container" id="section_recherche_3">
-                        <input id="barre_recherche_offre" type="search" placeholder="nom_poste">
+                <div class="flex_container" id="flex_container_recherche_1">
+                    <div class="flex_container" id="flex_container_recherche_2">
+                        <img id="ampoule_eteinte" src="images/ampoule_eteinte.png" alt="ampoule_eteinte">
+                        <img id="ampoule_allumer" src="images/ampoule_allumer.png" alt="ampoule_allumer">
+                        <input id="barre_recherche_offre" type="search" placeholder="nom_poste, mot-clé...">
+                        <span id="separateur_recherche">|</span>
+                        <img id="localisation" src="images/localisation.png" alt="localisation">
                         <input id="barre_recherche_lieu" type="search" placeholder="lieu">
 
                         <button id="bouton_recherche" type="submit">
