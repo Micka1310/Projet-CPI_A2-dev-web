@@ -20,6 +20,7 @@
 
     <body>
         <header>
+            
             <!--affichage principal de l'en-tête-->
             <div class="flex_container" id="flex_container_1">
                 <nav>
@@ -47,15 +48,10 @@
                         <span class="tooltip_text_gauche" id="tooltip_burger">Liens de navigation</span>
                     </p>
                 </div>
-
-                <!--bouton burger et profil (mobile)-->
-                <div id="profil_2"></div>
-                <span id="bouton_burger_2"><b>☰</b></span>
             </div>
 
             <!--affichage du nom/prenom et option de deconnexion apres appuie sur le profil-->
             <div class="flex_container" id="lien_profil_1">
-                <span id="x_1">✖</span>
                 <span>Connecter en tant que :</span>
 
                 <div id="nom_prenom_lien_profil_1">
@@ -63,13 +59,52 @@
                     <span><b>Prénom</b></span>
                 </div>
 
-                <nav>
-                    <a class="lien" href="#"><b>Déconnexion</b></a>
-                </nav>
+                <div class="flex_container" id="flex_container_4">
+                    <nav>
+                        <a class="lien" href="#"><b>Déconnexion</b></a>
+                        <img id="porte_sortie_1" src="../images/porte_sortie.png" alt="logo">
+                    </nav>
+                </div>
             </div>
 
-            <!--affichage de liens secondaire apres appuie du bouton burger-->
+            <!--affichage de liens secondaire apres appuie du bouton burger (paysage)-->
             <div class="flex_container" id="lien_burger_2">
+                <nav>
+                    <a class="lien" href="#"><b>Wish list</b></a>
+                    <a class="lien" href="#"><b>Étudiant</b></a>
+                    <a class="lien" href="#"><b>Pilote</b></a>
+                </nav>
+
+                <!--affichage de liens secondaire supplementaire apres appuie du bouton burger (paysage)-->
+                <div class="flex_container" id="lien_burger_3">
+                    <nav>
+                        <a class="lien" href="#"><b>Entreprise</b></a>
+                        <a class="lien" href="#"><b>Offre</b></a>
+                        <a class="lien" href="#"><b>A propos de nous</b></a>
+                    </nav>
+                </div>
+            </div>
+
+            <!--affichage du nom/prenom et option de deconnexion apres appuie sur le profil (portrait)-->
+            <div class="flex_container" id="lien_profil_2">
+                <span id="x_3">✖</span>
+                <span>Connecter en tant que :</span>
+
+                <div id="nom_prenom_lien_profil_2">
+                    <span><b>Nom</b></span>
+                    <span><b>Prénom</b></span>
+                </div>
+
+                <div class="flex_container" id="flex_container_5">
+                    <nav>
+                        <a class="lien" href="#"><b>Déconnexion</b></a>
+                        <img id="porte_sortie_2" src="../images/porte_sortie.png" alt="logo">
+                    </nav>
+                </div>
+            </div>
+
+            <!--affichage de liens secondaire apres appuie du bouton burger (portrait)-->
+            <div class="flex_container" id="lien_burger_1">
                 <span id="x_2">✖</span>
 
                 <nav>
@@ -78,7 +113,7 @@
                     <a class="lien" href="#"><b>Pilote</b></a>
                 </nav>
 
-                <!--affichage de liens secondaire supplementaire apres appuie du bouton burger (mobile)-->
+                <!--affichage de liens secondaire supplementaire apres appuie du bouton burger (portrait)-->
                 <div class="flex_container" id="lien_burger_3">
                     <nav>
                         <a class="lien" href="#"><b>Entreprise</b></a>

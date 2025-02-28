@@ -20,10 +20,11 @@
 
     <body>
         <header>
+            
             <!--affichage principal de l'en-tête-->
             <div class="flex_container" id="flex_container_1">
                 <nav>
-                    <a id="a_logo" href="offre.html"><img id="logo" src="images/logo.png" alt="logo"></a>
+                    <a id="a_logo" href="en-tete.html"><img id="logo" src="images/logo.png" alt="logo"></a>
                 </nav>
 
                 <div class="flex_container" id="flex_container_2">
@@ -47,15 +48,10 @@
                         <span class="tooltip_text_gauche" id="tooltip_burger">Liens de navigation</span>
                     </p>
                 </div>
-
-                <!--bouton burger et profil (mobile)-->
-                <div id="profil_2"></div>
-                <span id="bouton_burger_2"><b>☰</b></span>
             </div>
 
             <!--affichage du nom/prenom et option de deconnexion apres appuie sur le profil-->
             <div class="flex_container" id="lien_profil_1">
-                <span id="x_1">✖</span>
                 <span>Connecter en tant que :</span>
 
                 <div id="nom_prenom_lien_profil_1">
@@ -63,13 +59,52 @@
                     <span><b>Prénom</b></span>
                 </div>
 
-                <nav>
-                    <a class="lien" href="#"><b>Déconnexion</b></a>
-                </nav>
+                <div class="flex_container" id="flex_container_4">
+                    <nav>
+                        <a class="lien" href="#"><b>Déconnexion</b></a>
+                        <img id="porte_sortie_1" src="images/porte_sortie.png" alt="logo">
+                    </nav>
+                </div>
             </div>
 
-            <!--affichage de liens secondaire apres appuie du bouton burger-->
+            <!--affichage de liens secondaire apres appuie du bouton burger (paysage)-->
             <div class="flex_container" id="lien_burger_2">
+                <nav>
+                    <a class="lien" href="#"><b>Wish list</b></a>
+                    <a class="lien" href="#"><b>Étudiant</b></a>
+                    <a class="lien" href="#"><b>Pilote</b></a>
+                </nav>
+
+                <!--affichage de liens secondaire supplementaire apres appuie du bouton burger (paysage)-->
+                <div class="flex_container" id="lien_burger_3">
+                    <nav>
+                        <a class="lien" href="#"><b>Entreprise</b></a>
+                        <a class="lien" href="#"><b>Offre</b></a>
+                        <a class="lien" href="#"><b>A propos de nous</b></a>
+                    </nav>
+                </div>
+            </div>
+
+            <!--affichage du nom/prenom et option de deconnexion apres appuie sur le profil (portrait)-->
+            <div class="flex_container" id="lien_profil_2">
+                <span id="x_3">✖</span>
+                <span>Connecter en tant que :</span>
+
+                <div id="nom_prenom_lien_profil_2">
+                    <span><b>Nom</b></span>
+                    <span><b>Prénom</b></span>
+                </div>
+
+                <div class="flex_container" id="flex_container_5">
+                    <nav>
+                        <a class="lien" href="#"><b>Déconnexion</b></a>
+                        <img id="porte_sortie_2" src="images/porte_sortie.png" alt="logo">
+                    </nav>
+                </div>
+            </div>
+
+            <!--affichage de liens secondaire apres appuie du bouton burger (portrait)-->
+            <div class="flex_container" id="lien_burger_1">
                 <span id="x_2">✖</span>
 
                 <nav>
@@ -78,7 +113,7 @@
                     <a class="lien" href="#"><b>Pilote</b></a>
                 </nav>
 
-                <!--affichage de liens secondaire supplementaire apres appuie du bouton burger (mobile)-->
+                <!--affichage de liens secondaire supplementaire apres appuie du bouton burger (portrait)-->
                 <div class="flex_container" id="lien_burger_3">
                     <nav>
                         <a class="lien" href="#"><b>Entreprise</b></a>
@@ -89,21 +124,40 @@
             </div>
         </header>
 
-        <!--barres de recherche pour les offres-->
+        <!--barres de recherche (nom_poste et lieu) pour les offres-->
         <section id="section_recherche">
             <form action="#" method="get">
                 <div class="flex_container" id="flex_container_recherche_1">
-                    <div class="flex_container" id="flex_container_recherche_2">
-                        <img id="ampoule_eteinte" src="images/ampoule_eteinte.png" alt="ampoule_eteinte">
-                        <img id="ampoule_allumer" src="images/ampoule_allumer.png" alt="ampoule_allumer">
-                        <input id="barre_recherche_offre" type="search" placeholder="nom_poste, mot-clé...">
-                        <span id="separateur_recherche">|</span>
-                        <img id="localisation" src="images/localisation.png" alt="localisation">
-                        <input id="barre_recherche_lieu" type="search" placeholder="lieu">
 
-                        <button id="bouton_recherche" type="submit">
-                            <img id="loupe_recherche" src="images/loupe.png" alt="loupe">
+                    <!--en mode dekstop-->
+                    <div class="flex_container" id="flex_container_recherche_2">
+                        <img id="ampoule_eteinte_1" src="images/ampoule_eteinte.png" alt="ampoule_eteinte">
+                        <img id="ampoule_allumer_1" src="images/ampoule_allumer.png" alt="ampoule_allumer">
+                        <input id="barre_recherche_offre_1" type="search" placeholder="nom_poste, mot-clé...">
+                        <span id="separateur_recherche_1">|</span>
+                        <img id="localisation_1" src="images/localisation.png" alt="localisation">
+                        <input id="barre_recherche_lieu_1" type="search" placeholder="lieu">
+
+                        <button class="tooltip" id="bouton_recherche_1" type="submit">
+                            <img id="loupe_recherche_1" src="images/loupe.png" alt="loupe">
+                            <span class="tooltip_text_gauche" id="tooltip_loupe">bouton recherche</span>
                         </button>
+                    </div>
+
+
+                    <!--en mode mobile-->
+                    <div id="flex_container_recherche_3">
+                        <img id="ampoule_eteinte_2" src="images/ampoule_eteinte.png" alt="ampoule_eteinte">
+                        <input id="barre_recherche_offre_2" type="search" placeholder="nom_poste, mot-clé...">
+                    </div>
+
+                    <div id="flex_container_recherche_4">
+                        <img id="localisation_2" src="images/localisation.png" alt="localisation">
+                        <input id="barre_recherche_lieu_2" type="search" placeholder="lieu">
+                    </div>
+
+                    <div id="flex_container_recherche_5">
+                        <button id="bouton_recherche_2" type="submit">Rechercher</button>
                     </div>
                 </div>
             </form>
