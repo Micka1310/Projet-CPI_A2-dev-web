@@ -1,0 +1,286 @@
+<!-- page d'offre pour le projet dev web à CESI -->
+
+<!doctype html>
+
+<html lang="fr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="mot_clé" content="HTML">
+        <meta name="description" content="page d'offre">
+        <meta name="auteur" content="King Mickaël">
+        <meta name="date_de_mise_a_jour" content="22/02/2025">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="offre.css" rel="stylesheet" type="text/css">
+
+        <title>CESI ta chance | offre</title>
+    </head>
+
+    <body>
+        <header>
+            
+            <!--affichage principal de l'en-tête-->
+            <div class="flex_container" id="flex_container_1">
+                <nav>
+                    <a id="a_logo" href="en-tete.html"><img id="logo" src="images/logo.png" alt="logo"></a>
+                </nav>
+
+                <div class="flex_container" id="flex_container_2">
+                    <nav>
+                        <a class="lien" href="#"><b>Entreprise</b></a>
+                        <a class="lien" href="#"><b>Offre</b></a>
+                        <a class="lien" href="#"><b>A propos de nous</b></a>
+                    </nav>
+                </div>
+                
+                <div class="flex_container" id="flex_container_3">
+                    <div class="tooltip" id="profil_1">
+                        <span class="tooltip_text_gauche" id="tooltip_profil">Vous êtes connecté</span>
+                    </div>
+
+                    <nav>
+                        <a class="lien" id="connexion" href="#"><b>Connexion</b></a>
+                    </nav>
+
+                    <p class="tooltip" id="bouton_burger_1"><b>☰</b>
+                        <span class="tooltip_text_gauche" id="tooltip_burger">Liens de navigation</span>
+                    </p>
+                </div>
+            </div>
+
+            <!--affichage du nom/prenom et option de deconnexion apres appuie sur le profil-->
+            <div class="flex_container" id="lien_profil_1">
+                <span>Connecter en tant que :</span>
+
+                <div id="nom_prenom_lien_profil_1">
+                    <span><b>Nom</b></span>
+                    <span><b>Prénom</b></span>
+                </div>
+
+                <div class="flex_container" id="flex_container_4">
+                    <nav>
+                        <a class="lien" href="#"><b>Déconnexion</b></a>
+                        <img id="porte_sortie_1" src="images/porte_sortie.png" alt="logo">
+                    </nav>
+                </div>
+            </div>
+
+            <!--affichage de liens secondaire apres appuie du bouton burger (paysage)-->
+            <div class="flex_container" id="lien_burger_2">
+                <nav>
+                    <a class="lien" href="#"><b>Wish list</b></a>
+                    <a class="lien" href="#"><b>Étudiant</b></a>
+                    <a class="lien" href="#"><b>Pilote</b></a>
+                </nav>
+
+                <!--affichage de liens secondaire supplementaire apres appuie du bouton burger (paysage)-->
+                <div class="flex_container" id="lien_burger_3">
+                    <nav>
+                        <a class="lien" href="#"><b>Entreprise</b></a>
+                        <a class="lien" href="#"><b>Offre</b></a>
+                        <a class="lien" href="#"><b>A propos de nous</b></a>
+                    </nav>
+                </div>
+            </div>
+
+            <!--affichage du nom/prenom et option de deconnexion apres appuie sur le profil (portrait)-->
+            <div class="flex_container" id="lien_profil_2">
+                <span id="x_3">✖</span>
+                <span>Connecter en tant que :</span>
+
+                <div id="nom_prenom_lien_profil_2">
+                    <span><b>Nom</b></span>
+                    <span><b>Prénom</b></span>
+                </div>
+
+                <div class="flex_container" id="flex_container_5">
+                    <nav>
+                        <a class="lien" href="#"><b>Déconnexion</b></a>
+                        <img id="porte_sortie_2" src="images/porte_sortie.png" alt="logo">
+                    </nav>
+                </div>
+            </div>
+
+            <!--affichage de liens secondaire apres appuie du bouton burger (portrait)-->
+            <div class="flex_container" id="lien_burger_1">
+                <span id="x_2">✖</span>
+
+                <nav>
+                    <a class="lien" href="#"><b>Wish list</b></a>
+                    <a class="lien" href="#"><b>Étudiant</b></a>
+                    <a class="lien" href="#"><b>Pilote</b></a>
+                </nav>
+
+                <!--affichage de liens secondaire supplementaire apres appuie du bouton burger (portrait)-->
+                <div class="flex_container" id="lien_burger_3">
+                    <nav>
+                        <a class="lien" href="#"><b>Entreprise</b></a>
+                        <a class="lien" href="#"><b>Offre</b></a>
+                        <a class="lien" href="#"><b>A propos de nous</b></a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!--barres de recherche (nom_poste et lieu) pour les offres-->
+        <section id="section_recherche">
+            <form action="#" method="get">
+                <div class="flex_container" id="flex_container_recherche_1">
+
+                    <!--en mode dekstop-->
+                    <div class="flex_container" id="flex_container_recherche_2">
+                        <img id="ampoule_eteinte_1" src="images/ampoule_eteinte.png" alt="ampoule_eteinte">
+                        <img id="ampoule_allumer_1" src="images/ampoule_allumer.png" alt="ampoule_allumer">
+                        <input id="barre_recherche_offre_1" type="search" placeholder="nom_poste, mot-clé...">
+                        <span id="separateur_recherche_1">|</span>
+                        <img id="localisation_1" src="images/localisation.png" alt="localisation">
+                        <input id="barre_recherche_lieu_1" type="search" placeholder="lieu">
+
+                        <button class="tooltip" id="bouton_recherche_1" type="submit">
+                            <img id="loupe_recherche_1" src="images/loupe.png" alt="loupe">
+                            <span class="tooltip_text_gauche" id="tooltip_loupe">bouton recherche</span>
+                        </button>
+                    </div>
+
+
+                    <!--en mode mobile-->
+                    <div id="flex_container_recherche_3">
+                        <img id="ampoule_eteinte_2" src="images/ampoule_eteinte.png" alt="ampoule_eteinte">
+                        <input id="barre_recherche_offre_2" type="search" placeholder="nom_poste, mot-clé...">
+                    </div>
+
+                    <div id="flex_container_recherche_4">
+                        <img id="localisation_2" src="images/localisation.png" alt="localisation">
+                        <input id="barre_recherche_lieu_2" type="search" placeholder="lieu">
+                    </div>
+
+                    <div id="flex_container_recherche_5">
+                        <button id="bouton_recherche_2" type="submit">Rechercher</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    </body>
+</html>
+
+<script src="offre.js"></script>
