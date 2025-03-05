@@ -1,0 +1,113 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Gelasio:ital,wght@0,400..700;1,400..700&family=Pacifico&family=VT323&display=swap');
+
+@font-face {
+    font-family: "raspberie" ;
+    src: url('assets/raspberieregular-owa2v.ttf') format('truetype');
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to top, rgb(34, 45, 90),rgb(0, 0, 0));
+    font-family: "raspberie", serif;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+form {
+    margin-top: 2%;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 40px 60px;
+    border-radius: 10px;
+    min-width: 300px;
+}
+
+form h1{
+    color: #000000;
+    text-align: center;
+}
+
+form .socialmedia{
+    margin-top: -10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+form .socialmedia p{
+    padding: 5px;
+    margin-left: 10px;
+    border: 1px solid #545454;
+    border-radius: 100px;
+    width: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.login{
+    text-align: center;
+}
+
+form .inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+form .inputs input[type="email"], input[type="password"]{
+    padding: 15px;
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0); ;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+::placeholder {
+    color: black;
+}
+
+
+
+form button{
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size : 15px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.7);;
+    outline: none;
+}
+
+form p.inscription{
+    font-size : 14px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+
+}
+
+form p.inscription span a{
+    color: red;
+}
+
+form p.inscription span a:hover{
+    color: blueviolet;
+}
+
+
+form p.oublie{
+    font-size : 14px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+
+}
+
+form p.oublie span a{
+    color: red;
+}
+
+form p.oublie span a:hover{
+    color: blueviolet;
+}
