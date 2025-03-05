@@ -33,7 +33,7 @@ function clique_burger_1()
             lien_burger_1.style.transform = "translateX(0%)";
             lien_afficher = true;
             //pour debugger
-            console.log("fonction clique_burger_1 : !lien_afficher -> verif_mode_paysage && height < 600 && width < 940");
+            //console.log("fonction clique_burger_1 : !lien_afficher -> verif_mode_paysage && height < 600 && width < 940");
         }
 
         //version dekstop
@@ -45,7 +45,7 @@ function clique_burger_1()
             lien_afficher = true;
             profil_afficher = false;
             //pour debugger
-            console.log("fonction clique_burger_1 : !lien_afficher -> verif_mode_paysage");
+            //console.log("fonction clique_burger_1 : !lien_afficher -> verif_mode_paysage");
         }
 
         //version mobile
@@ -54,7 +54,7 @@ function clique_burger_1()
             lien_burger_1.style.transform = "translateX(0%)";
             lien_afficher = true;
             //pour debugger
-            console.log("fonction clique_burger_1 : !lien_afficher -> boucle else");
+            //console.log("fonction clique_burger_1 : !lien_afficher -> boucle else");
         }
     }
 
@@ -66,7 +66,7 @@ function clique_burger_1()
             lien_burger_2.style.display = "none";
             lien_afficher = false;
             //pour debugger
-            console.log("fonction clique_burger_1 : boucle else -> verif_mode_paysage");
+            //console.log("fonction clique_burger_1 : boucle else -> verif_mode_paysage");
         }
     }
 }
@@ -81,7 +81,7 @@ function clique_bouton_x_2()
     lien_burger_1.style.transform = "translateX(100%)";
     lien_afficher = false;
     //pour debugger
-    console.log("fonction clique_bouton_x_2");
+    //console.log("fonction clique_bouton_x_2");
 }
 
 bouton_x_2.addEventListener("click", clique_bouton_x_2);
@@ -105,7 +105,7 @@ function clique_profil()
             lien_profil_2.style.transform = "translateX(0%)";
             profil_afficher = true;
             //pour debugger
-            console.log("fonction clique_profil : !profil_afficher -> verif_mode_paysage && height < 600 && width < 940");
+            //console.log("fonction clique_profil : !profil_afficher -> verif_mode_paysage && height < 600 && width < 940");
         }
 
         //version dekstop
@@ -116,7 +116,7 @@ function clique_profil()
             profil_afficher = true;
             lien_afficher = false;
             //pour debugger
-            console.log("fonction clique_profil : !profil_afficher -> verif_mode_paysage");
+            //console.log("fonction clique_profil : !profil_afficher -> verif_mode_paysage");
         }
 
         //version mobile
@@ -125,7 +125,7 @@ function clique_profil()
             lien_profil_2.style.transform = "translateX(0%)";
             profil_afficher = true;
             //pour debugger
-            console.log("fonction clique_profil : !profil_afficher -> boucle else");
+            //console.log("fonction clique_profil : !profil_afficher -> boucle else");
         }
     }
 
@@ -137,7 +137,7 @@ function clique_profil()
             lien_profil_1.style.display = "none";
             profil_afficher = false;
             //pour debugger
-            console.log("fonction clique_profil : boucle else");
+            //console.log("fonction clique_profil : boucle else");
         }
     }
 }
@@ -160,7 +160,7 @@ bouton_x_3.addEventListener("click", clique_bouton_x_3);
 
 /*pour faire disparaître les affichages du bouton profil/burger
 lorsque l'on clique autre part dans la page que ces affichages (mode paysage)*/
-function clique_page_1 (cible)
+function clique_page_1(cible)
 {
     let verif_mode_paysage = window.matchMedia("(orientation: landscape)").matches;
     
@@ -177,7 +177,7 @@ function clique_page_1 (cible)
         lien_burger_2.style.display = "none";
         lien_afficher = false;
         //pour debugger
-        console.log("clique_page_1 : lien_afficher");
+        //console.log("clique_page_1 : lien_afficher");
     }
 
     if 
@@ -193,7 +193,7 @@ function clique_page_1 (cible)
         lien_profil_1.style.display = "none";
         profil_afficher = false;
         //pour debugger
-        console.log("clique_page_1 : profil_afficher");
+        //console.log("clique_page_1 : profil_afficher");
     }
 }
 
@@ -201,28 +201,24 @@ document.addEventListener("click", clique_page_1);
 
 
 /*pour changer d'image d'ampoule dans la barre de recherche 
-lorsque la souris et sur l'image (paysage et portrait)*/
-const ampoule_eteinte_1 = document.getElementById('ampoule_eteinte_1');
-const ampoule_allumer_1 = document.getElementById('ampoule_allumer_1');
+lorsque des caractères sont dans le champs de saisie de texte (paysage et portrait)*/
+const ampoule_eteinte_1 = document.getElementById("ampoule_eteinte_1");
+const ampoule_allumer_1 = document.getElementById("ampoule_allumer_1");
 const barre_recherche_offre_1 = document.getElementById("barre_recherche_offre_1");
 const barre_recherche_offre_2 = document.getElementById("barre_recherche_offre_2");
-const ampoule_eteinte_2 = document.getElementById('ampoule_eteinte_2');
-const ampoule_allumer_2 = document.getElementById('ampoule_allumer_2');
+const ampoule_eteinte_2 = document.getElementById("ampoule_eteinte_2");
+const ampoule_allumer_2 = document.getElementById("ampoule_allumer_2");
 
-function allume_ampoule ()
+function allume_ampoule_paysage()
 {
-    if (barre_recherche_offre_1.value.length > 0 || barre_recherche_offre_2.value.length > 0)
+    if (barre_recherche_offre_1.value.length > 0)
     {
         ampoule_eteinte_1.style.visibility = "hidden";
         ampoule_eteinte_1.style.opacity = "0";
         ampoule_allumer_1.style.visibility = "visible";
         ampoule_allumer_1.style.opacity = "1";
-        ampoule_eteinte_2.style.visibility = "hidden";
-        ampoule_eteinte_2.style.opacity = "0";
-        ampoule_allumer_2.style.visibility = "visible";
-        ampoule_allumer_2.style.opacity = "1";
         //pour debugger
-        //console.log("allume_ampoule : if barre_recherche_offre_1");
+        //console.log("allume_ampoule_paysage : if barre_recherche_offre_1");
     }
 
     else
@@ -231,22 +227,101 @@ function allume_ampoule ()
         ampoule_eteinte_1.style.opacity = "1";
         ampoule_allumer_1.style.visibility = "hidden";
         ampoule_allumer_1.style.opacity = "0";
+        //pour debugger
+        //console.log("allume_ampoule_paysage : else");
+    }
+}
+
+function allume_ampoule_portrait()
+{
+    if (barre_recherche_offre_2.value.length > 0)
+    {
+        ampoule_eteinte_2.style.visibility = "hidden";
+        ampoule_eteinte_2.style.opacity = "0";
+        ampoule_allumer_2.style.visibility = "visible";
+        ampoule_allumer_2.style.opacity = "1";
+        //pour debugger
+        //console.log("allume_ampoule_portrait : if barre_recherche_offre_2");
+    }
+
+    else
+    {
         ampoule_eteinte_2.style.visibility = "visible";
         ampoule_eteinte_2.style.opacity = "1";
         ampoule_allumer_2.style.visibility = "hidden";
         ampoule_allumer_2.style.opacity = "0";
         //pour debugger
-        //console.log("allume_ampoule : else");
+        //console.log("allume_ampoule_portrait : else");
     }
 }
 
-barre_recherche_offre_1.addEventListener("input", allume_ampoule);
-barre_recherche_offre_2.addEventListener("input", allume_ampoule);
+barre_recherche_offre_1.addEventListener("input", allume_ampoule_paysage);
+barre_recherche_offre_2.addEventListener("input", allume_ampoule_portrait);
+
+
+/*pour changer d'image de localisation dans la barre de recherche 
+lorsque des caractères sont dans le champs de saisie de texte (paysage et portrait)*/
+const localisation_eteinte_1 = document.getElementById("localisation_eteinte_1");
+const localisation_allumer_1 = document.getElementById("localisation_allumer_1");
+const barre_recherche_lieu_1 = document.getElementById("barre_recherche_lieu_1");
+const barre_recherche_lieu_2 = document.getElementById("barre_recherche_lieu_2");
+const localisation_eteinte_2 = document.getElementById("localisation_eteinte_2");
+const localisation_allumer_2 = document.getElementById("localisation_allumer_2");
+
+function allume_localisation_paysage()
+{
+    if (barre_recherche_lieu_1.value.length > 0)
+    {
+        localisation_eteinte_1.style.visibility = "hidden";
+        localisation_eteinte_1.style.opacity = "0";
+        localisation_allumer_1.style.visibility = "visible";
+        localisation_allumer_1.style.opacity = "1";
+        //pour debugger
+        //console.log("allume_localisation_paysage : if barre_recherche_lieu_1");
+    }
+
+    else
+    {
+        localisation_eteinte_1.style.visibility = "visible";
+        localisation_eteinte_1.style.opacity = "1";
+        localisation_allumer_1.style.visibility = "hidden";
+        localisation_allumer_1.style.opacity = "0";
+        //pour debugger
+        //console.log("allume_localisation_paysage : else");
+    }
+}
+
+function allume_localisation_portrait()
+{
+    if (barre_recherche_lieu_2.value.length > 0)
+    {
+        localisation_eteinte_2.style.visibility = "hidden";
+        localisation_eteinte_2.style.opacity = "0";
+        localisation_allumer_2.style.visibility = "visible";
+        localisation_allumer_2.style.opacity = "1";
+        //pour debugger
+        //console.log("allume_localisation_portrait : if barre_recherche_lieu_2");
+    }
+
+    else
+    {
+        localisation_eteinte_2.style.visibility = "visible";
+        localisation_eteinte_2.style.opacity = "1";
+        localisation_allumer_2.style.visibility = "hidden";
+        localisation_allumer_2.style.opacity = "0";
+        //pour debugger
+        //console.log("allume_localisation_portrait : else");
+    }
+}
+
+
+barre_recherche_lieu_1.addEventListener("input", allume_localisation_paysage);
+barre_recherche_lieu_2.addEventListener("input", allume_localisation_portrait);
 
 
 /*pour afficher/cacher la barre de recherche de stage 
 en cliquant sur l'élément "recherche" ou ">" (portrait)*/
-const flex_container_recherche_1 = document.getElementById("flex_container_recherche_1");
+const flex_container_recherche_8 = document.getElementById("flex_container_recherche_8");
 const flex_container_recherche_6 = document.getElementById("flex_container_recherche_6");
 const flex_container_recherche_7 = document.getElementById("flex_container_recherche_7");
 const bouton_mode_recherche_2 = document.getElementById("bouton_mode_recherche_2");
@@ -257,20 +332,20 @@ function affiche_recherhe()
 {
     if (!section_recherche_afficher)
     {
-        flex_container_recherche_1.style.transition = "transform 0.5s ease"
-        flex_container_recherche_1.style.transform = "translateX(0%)";
+        flex_container_recherche_8.style.transition = "transform 0.5s ease"
+        flex_container_recherche_8.style.transform = "translateX(0%)";
         section_recherche_afficher = true;
         //pour debugger
-        console.log("affiche_recherche : !section_recherche_afficher");
+        //console.log("affiche_recherche : !section_recherche_afficher");
     }
 
     else
     {
-        flex_container_recherche_1.style.transition = "transform 0.5s ease"
-        flex_container_recherche_1.style.transform = "translateX(-100%)";
+        flex_container_recherche_8.style.transition = "transform 0.5s ease"
+        flex_container_recherche_8.style.transform = "translateX(-100%)";
         section_recherche_afficher = false;
         //pour debugger
-        console.log("affiche_recherche : else");
+        //console.log("affiche_recherche : else");
     }
 }
 
@@ -293,7 +368,7 @@ function changement_mode()
             lien_burger_2.style.display = "none";
             lien_afficher = false;
             //pour debugger
-            console.log("changement_mode : verif_mode -> profil_afficher || lien_afficher");
+            //console.log("changement_mode : verif_mode -> profil_afficher || lien_afficher");
         }
 
         if (window.innerHeight < 600 && window.innerWidth < 940)
@@ -312,8 +387,10 @@ function changement_mode()
         lien_profil_2.style.boxShadow = "0vh 0vh 1.25vh #ff0000;";
         lien_burger_1.style.boxShadow = "0vh 0vh 1.25vh #0099ff";
         lien_burger_2.style.boxShadow = "0vh 0vh 1.25vh #0099ff";
+
+        flex_container_recherche_8.style.display = "none";
         //pour debugger
-        console.log("L'écran est maintenant en mode paysage");
+        //console.log("L'écran est maintenant en mode paysage");
     }
 
     //passage en mode portrait
@@ -322,16 +399,20 @@ function changement_mode()
         lien_profil_1.style.display = "none";
         lien_profil_2.style.display = "flex";
         profil_afficher = false;
+
         lien_burger_2.style.display = "none";
         lien_burger_1.style.display = "flex";
         lien_afficher = false;
+
         lien_profil_1.style.boxShadow = "0vh 0vh 0vh;";
         lien_profil_2.style.boxShadow = "0vh 0vh 0vh";
         lien_burger_1.style.boxShadow = "0vh 0vh 0vh";
         lien_burger_2.style.boxShadow = "0vh 0vh 0vh";
+
+        flex_container_recherche_8.style.display = "flex";
         //pour debugger
-        console.log("changement_mode : boucle else");
-        console.log("L'écran est maintenant en mode portrait");
+        //console.log("changement_mode : boucle else");
+        //console.log("L'écran est maintenant en mode portrait");
     }
 }
 

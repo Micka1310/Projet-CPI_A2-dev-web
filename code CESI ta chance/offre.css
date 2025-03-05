@@ -283,10 +283,13 @@ a:hover {color: #ff5500;}
 
 #flex_container_recherche_1, #flex_container_recherche_2, 
 #flex_container_recherche_3, #flex_container_recherche_4,
-#flex_container_recherche_5, #flex_container_recherche_7
+#flex_container_recherche_5, #flex_container_recherche_7,
+#flex_container_recherche_8
 {justify-content: center; align-items: center;}
 
-#flex_container_recherche_1 {transition: transform 0.5s ease; background-color: #0055cc;}
+#flex_container_recherche_1, #flex_container_recherche_8 {background-color: #0055cc;}
+
+#flex_container_recherche_8 {transition: transform 0.5s ease;}
 
 #flex_container_recherche_2 
 {
@@ -303,6 +306,7 @@ a:hover {color: #ff5500;}
 {
     width: 40vh;
     padding: 2.5vh 2vh 2.5vh 2vh;
+    font-size: 1.75vh;
     border: transparent;
 }
 
@@ -355,11 +359,19 @@ a:hover {color: #ff5500;}
 
 #loupe_recherche_2 {width: 4vh; height: 4vh;}
 
-#localisation_1 {width: 6vh; height: 6vh;}
+#localisation_eteinte_1, #localisation_allumer_1 {width: 6vh; height: 6vh;}
 
 #ampoule_eteinte_2, #ampoule_allumer_2 {width: 4vh; height: 4vh;}
 
-#localisation_2 {width: 5vh; height: 5vh;}
+#localisation_eteinte_2, #localisation_allumer_2 {width: 5vh; height: 5vh;}
+
+#localisation_eteinte_1, #localisation_eteinte_2 {visibility: visible; opacity: 1;}
+
+#localisation_allumer_1, #localisation_allumer_2 {visibility: none; opacity: 0;}
+
+#localisation_allumer_1 {margin-left: -6vh;}
+
+#localisation_allumer_2 {margin-left: -5vh;}
 
 #separateur_recherche_1
 {
@@ -428,7 +440,7 @@ a:hover {color: #ff5500;}
 
 #section_filtre
 {
-    display: none;
+    /*display: none;*/
     position: fixed; 
     top: 20%;
     width: 100%;
@@ -441,7 +453,7 @@ a:hover {color: #ff5500;}
 
 #flex_container_filtre_1 div 
 {
-    width: 20vh;
+    width: 22vh;
     flex-direction: column;
     text-align: center;
     gap: 1vh;
@@ -450,12 +462,15 @@ a:hover {color: #ff5500;}
     padding-bottom: 2vh;
 }
 
+#flex_container_filtre_1 div b {font-size: 2vh;}
+
 #flex_container_filtre_1 div select 
 {
     /*width: 15vh;*/
     height: 5vh;
     padding: 1vh;
     border-radius: 1vh;
+    font-size: 1.75vh;
     background-color: #ffffff;
     cursor: pointer;
 }
@@ -464,11 +479,11 @@ a:hover {color: #ff5500;}
 
 #flex_container_filtre_1 div select:focus {background-color: #ffffff;}
 
-#filtre_specialite {/*margin-left: 3vh;*/ background-color: #55ffbd;}
+/*#filtre_specialite {background-color: #55ffbd;}*/
 
-#filtre_teletravail {background-color: #ff0000;}
+/*#filtre_teletravail {background-color: #ff0000;}*/
 
-#filtre_langue {/*margin-right: 3vh;*/ background-color: #ffff00;}
+/*#filtre_langue {background-color: #ffff00;}*/
 
 
 
@@ -527,7 +542,7 @@ a:hover {color: #ff5500;}
     #x_2 {margin: 2vh 0vh 2vh 2vh;}
     #lien_burger_3 {display: flex; gap: 4vh;}
     #porte_sortie_1, #porte_sortie_2 {width: 3.5vh; height: 3.5vh;}
-    #flex_container_recherche_1 {flex-direction: column; transform: translateX(-100%);}
+    #flex_container_recherche_8 {flex-direction: column; transform: translateX(-100%);}
     #flex_container_recherche_2 {display: none;}
 
     #flex_container_recherche_3, #flex_container_recherche_4, 
@@ -551,13 +566,13 @@ a:hover {color: #ff5500;}
 
 @media only screen and (max-width: 399px) and (orientation: portrait)
 {
-    /*body {background-color: #f800bd;}*/ /*pour debugger*/
+    /*body {background-color: #55ffbd;}*/ /*pour debugger*/
     #barre_recherche_offre_2, #barre_recherche_lieu_2 {width: 25vh;}
 }
 
-@media only screen and (max-width: 399px) and (orientation: portrait)
+@media only screen and (max-width: 299px) and (orientation: portrait)
 {
-    body {background-color: #55ffbd;} /*pour debugger*/
+    body {background-color: #ff55bd;} /*pour debugger*/
     #barre_recherche_offre_2, #barre_recherche_lieu_2 {width: 35vh;}
 }
 

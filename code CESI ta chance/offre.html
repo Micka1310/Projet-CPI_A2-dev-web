@@ -130,15 +130,16 @@
 
             <!--barres de recherche (nom_poste et lieu) pour les offres-->
             <section id="section_recherche">
-                <div class="flex_container" id="flex_container_recherche_1">
 
-                    <!--(paysage)-->
+                <!--(paysage)-->
+                <div class="flex_container" id="flex_container_recherche_1">
                     <div class="flex_container" id="flex_container_recherche_2">
                         <img id="ampoule_eteinte_1" src="images/ampoule_eteinte.png" alt="ampoule_eteinte">
                         <img id="ampoule_allumer_1" src="images/ampoule_allumer.png" alt="ampoule_allumer">
                         <input id="barre_recherche_offre_1" type="search" placeholder="nom_poste, mot-clé...">
                         <span id="separateur_recherche_1">|</span>
-                        <img id="localisation_1" src="images/localisation.png" alt="localisation">
+                        <img id="localisation_eteinte_1" src="images/localisation.png" alt="localisation">
+                        <img id="localisation_allumer_1" src="images/localisation_rouge.png" alt="localisation">
                         <input id="barre_recherche_lieu_1" type="search" placeholder="lieu">
 
                         <button class="tooltip" id="bouton_recherche_1" type="submit">
@@ -146,9 +147,11 @@
                             <span class="tooltip_text_gauche" id="tooltip_loupe">bouton recherche</span>
                         </button>
                     </div>
+                </div>
 
 
-                    <!--(portrait)-->
+                <!--(portrait)-->
+                <div class="flex_container" id="flex_container_recherche_8">
                     <div class="flex_container" id="flex_container_recherche_6">
                         <div class="flex_container" id="flex_container_recherche_3">
                             <img id="ampoule_eteinte_2" src="images/ampoule_eteinte.png" alt="ampoule_eteinte">
@@ -163,7 +166,8 @@
                     </div>
 
                     <div class="flex_container" id="flex_container_recherche_4">
-                        <img id="localisation_2" src="images/localisation.png" alt="localisation">
+                        <img id="localisation_eteinte_2" src="images/localisation.png" alt="localisation">
+                        <img id="localisation_allumer_2" src="images/localisation_rouge.png" alt="localisation">
                         <input id="barre_recherche_lieu_2" type="search" placeholder="lieu">
                     </div>
 
@@ -239,19 +243,6 @@
                     </div>
 
                     <div class="flex_container">
-                        <b>Entreprise :</b>
-
-                        <select>
-                            <option>Tout</option>
-                            <option>Thales</option>
-                            <option>Engie</option>
-                            <option>Renault</option>
-                            <option>Carrefour</option>
-                            <option>LCL</option>
-                        </select>
-                    </div>
-
-                    <div class="flex_container">
                         <b>Salaire :</b>
 
                         <select>
@@ -263,29 +254,8 @@
                         </select>
                     </div>
 
-                    <div class="flex_container">
-                        <b>Emploi consulté :</b>
-
-                        <select>
-                            <option>Tout</option>
-                            <option>Oui</option>
-                            <option>Non</option>
-                        </select>
-                    </div>
-
-                    <div class="flex_container">
-                        <b>Horaire de travail :</b>
-
-                        <select>
-                            <option>Tout</option>
-                            <option>+35</option>
-                            <option>+40</option>
-                            <option>+45</option>
-                        </select>
-                    </div>
-
                     <div class="flex_container" id="filtre_langue">
-                        <b>Langue demandé :</b>
+                        <b>Langue :</b>
 
                         <select>
                             <option>Tout</option>
