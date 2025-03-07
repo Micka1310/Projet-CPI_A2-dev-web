@@ -16,18 +16,40 @@ html, body
     font-family: Arial, Helvetica, sans-serif;
 }
 
+#arriere_plan
+{
+    position: fixed;        /* Fixe cet élément sur toute la fenêtre */
+    top: 11%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(15, 82, 125, 1), rgba(0, 255, 255, 0.8));
+    /* (255, 85, 189, 0.3) couleur rose fantaisie
+    (0, 255, 255, 0.8) couleur bleu ciel*/ 
+    z-index: -1;
+}
+
 header
 {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 10%;
-    margin-top: 1vh;
-    z-index: 1;
+    height: 11%;
+    padding-top: 1vh;
+    padding-bottom: 0.5vh;
+    z-index: 10;
     /*opacity: 0.2;*/ /*pour debugger*/
     /*background-color: #aaaaaa;*/ /*pour debugger*/
+    background-image: url("../images/arriere_plan_header.jpg");
+    background-size: contain;
+    background-position: center;
     font-family: "VT323";
+    box-shadow: 0vh 0vh 1vh #ffffff;
 }
+
+header:hover {box-shadow: 0vh 0vh 1vh #ffff00;}
+
+a {color: #5500cc;}
 
 a:hover {color: #ff5500;}
 
@@ -68,9 +90,11 @@ a:hover {color: #ff5500;}
     /*background-color: #0000ff;*/ /*pour debugger*/
 }
 
+#flex_container_2 nav a {color: aquamarine;}
+
 #flex_container_2 a {font-size: 3vh; transition: 0.3s ease-in-out, transform 0.2s ease-in-out;}
 
-#flex_container_2 a:hover {transform: scale(1.1);}
+#flex_container_2 a:hover {transform: scale(1.1); color: #ffdd00;}
 
 .lien {text-decoration: none;}
 
@@ -131,9 +155,15 @@ a:hover {color: #ff5500;}
 
 #connexion {display: none;}
 
-#bouton_burger_1 {font-size: 5vh; cursor: pointer; /*background-color: aquamarine;*/ /*pour debugger*/}
+#bouton_burger_1 
+{
+    font-size: 5vh;
+    cursor: pointer;
+    color: aquamarine;
+    /*background-color: aquamarine;*/ /*pour debugger*/
+}
 
-#bouton_burger_1:hover {color: #ff5500;}
+#bouton_burger_1:hover {color: #ffdd00;}
 
 #lien_profil_1
 {
@@ -157,7 +187,7 @@ a:hover {color: #ff5500;}
     position: fixed;
     flex-direction: column;
     top: -1%;
-    right: -1%;
+    right: -3%;
     width: 80%;
     font-size: 3vh;
     border: black solid 0.5vh;
@@ -169,7 +199,9 @@ a:hover {color: #ff5500;}
 
 #lien_profil_2 {padding: 3vh; gap: 3vh;}
 
-#lien_profil_1, #lien_profil_2 {box-shadow: 0vh 0vh 1.25vh #ff0000;} 
+#lien_profil_1, #lien_profil_2,
+#lien_burger_1, #lien_burger_2 
+{box-shadow: 0vh 0vh 2vh #ffff00;} 
 
 #lien_burger_1 nav
 {
@@ -236,8 +268,6 @@ a:hover {color: #ff5500;}
     background-color: #ffffff;
     z-index: 2;
 }
-
-#lien_burger_1, #lien_burger_2 {box-shadow: 0vh 0vh 1.25vh #0099ff;}
 
 #lien_burger_2 nav 
 {

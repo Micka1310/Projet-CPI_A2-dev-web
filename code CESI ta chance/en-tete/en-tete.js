@@ -230,10 +230,10 @@ function changement_mode()
             lien_burger_1.style.display = "none";
         }
 
-        lien_profil_1.style.boxShadow = "0vh 0vh 1.25vh #ff0000;";
-        lien_profil_2.style.boxShadow = "0vh 0vh 1.25vh #ff0000;";
-        lien_burger_1.style.boxShadow = "0vh 0vh 1.25vh #0099ff";
-        lien_burger_2.style.boxShadow = "0vh 0vh 1.25vh #0099ff";
+        lien_profil_1.style.boxShadow = "0vh 0vh 2vh #ffff00;";
+        lien_profil_2.style.boxShadow = "0vh 0vh 2vh #ffff00;";
+        lien_burger_1.style.boxShadow = "0vh 0vh 2vh #ffff00";
+        lien_burger_2.style.boxShadow = "0vh 0vh 2vh #ffff00";
         //pour debugger
         console.log("L'écran est maintenant en mode paysage");
     }
@@ -247,10 +247,6 @@ function changement_mode()
         lien_burger_2.style.display = "none";
         lien_burger_1.style.display = "flex";
         lien_afficher = false;
-        lien_profil_1.style.boxShadow = "0vh 0vh 0vh;";
-        lien_profil_2.style.boxShadow = "0vh 0vh 0vh";
-        lien_burger_1.style.boxShadow = "0vh 0vh 0vh";
-        lien_burger_2.style.boxShadow = "0vh 0vh 0vh";
         //pour debugger
         console.log("changement_mode : boucle else");
         console.log("L'écran est maintenant en mode portrait");
