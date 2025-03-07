@@ -13,7 +13,21 @@ html, body
 {
     width: 100%;
     height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    font-family: "VT323";
+}
+
+#arriere_plan
+{
+    position: fixed;
+    top: 11%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(15, 82, 125, 1), rgba(0, 255, 255, 0.8));
+    /* (255, 85, 189, 0.3) couleur rose fantaisie
+    (0, 255, 255, 0.8) couleur bleu ciel*/ 
+    z-index: -1;
 }
 
 header
@@ -21,13 +35,22 @@ header
     position: fixed;
     top: 0;
     width: 100%;
-    height: 10%;
-    margin-top: 1vh;
-    z-index: 1;
+    height: 11%;
+    padding-top: 1vh;
+    padding-bottom: 0.5vh;
+    z-index: 10;
     /*opacity: 0.2;*/ /*pour debugger*/
     /*background-color: #aaaaaa;*/ /*pour debugger*/
-    font-family: "VT323";
+    background-image: url("images/arriere_plan_header.jpg");
+    background-size: contain;
+    background-position: center;
+    /*font-family: "VT323";*/
+    box-shadow: 0vh 0vh 1vh #ffffff;
 }
+
+header:hover {box-shadow: 0vh 0vh 1vh #ffff00;}
+
+a {color: #5500cc;}
 
 a:hover {color: #ff5500;}
 
@@ -68,9 +91,11 @@ a:hover {color: #ff5500;}
     /*background-color: #0000ff;*/ /*pour debugger*/
 }
 
+#flex_container_2 nav a {color: aquamarine;}
+
 #flex_container_2 a {font-size: 3vh; transition: 0.3s ease-in-out, transform 0.2s ease-in-out;}
 
-#flex_container_2 a:hover {transform: scale(1.1);}
+#flex_container_2 a:hover {transform: scale(1.1); color: #ffdd00;}
 
 .lien {text-decoration: none;}
 
@@ -131,9 +156,15 @@ a:hover {color: #ff5500;}
 
 #connexion {display: none;}
 
-#bouton_burger_1 {font-size: 5vh; cursor: pointer; /*background-color: aquamarine;*/ /*pour debugger*/}
+#bouton_burger_1 
+{
+    font-size: 5vh;
+    cursor: pointer;
+    color: aquamarine;
+    /*background-color: aquamarine;*/ /*pour debugger*/
+}
 
-#bouton_burger_1:hover {color: #ff5500;}
+#bouton_burger_1:hover {color: #ffdd00;}
 
 #lien_profil_1
 {
@@ -157,7 +188,7 @@ a:hover {color: #ff5500;}
     position: fixed;
     flex-direction: column;
     top: -1%;
-    right: -1%;
+    right: -3%;
     width: 80%;
     font-size: 3vh;
     border: black solid 0.5vh;
@@ -169,7 +200,9 @@ a:hover {color: #ff5500;}
 
 #lien_profil_2 {padding: 3vh; gap: 3vh;}
 
-#lien_profil_1, #lien_profil_2 {box-shadow: 0vh 0vh 1.25vh #ff0000;} 
+#lien_profil_1, #lien_profil_2,
+#lien_burger_1, #lien_burger_2 
+{box-shadow: 0vh 0vh 2vh #ffff00;} 
 
 #lien_burger_1 nav
 {
@@ -237,8 +270,6 @@ a:hover {color: #ff5500;}
     z-index: 2;
 }
 
-#lien_burger_1, #lien_burger_2 {box-shadow: 0vh 0vh 1.25vh #0099ff;}
-
 #lien_burger_2 nav 
 {
     display: flex; 
@@ -278,7 +309,7 @@ a:hover {color: #ff5500;}
     position: fixed; 
     top: 10%;
     width: 100%;
-    padding-top: 1.5vh;
+    padding-top: 2vh;
 }
 
 #flex_container_recherche_1, #flex_container_recherche_2, 
@@ -287,9 +318,15 @@ a:hover {color: #ff5500;}
 #flex_container_recherche_8
 {justify-content: center; align-items: center;}
 
-#flex_container_recherche_1, #flex_container_recherche_8 {background-color: #0055cc;}
+/*#flex_container_recherche_1, #flex_container_recherche_8 {background-color: #0055cc;}*/ /*pour debugger*/
 
-#flex_container_recherche_8 {transition: transform 0.5s ease;}
+#flex_container_recherche_8 
+{
+    padding-bottom: 0vh;
+    background-color: #0099ff;
+    transition: transform 0.5s ease;
+    z-index: 2;
+}
 
 #flex_container_recherche_2 
 {
@@ -298,6 +335,7 @@ a:hover {color: #ff5500;}
     padding-right: 2.5vh;
     border-radius: 4vh;
     background-color: #ffffff;
+    /*box-shadow: 0vh 0vh 0.8vh #ffff00;*/
 }
 
 #flex_container_6 {display: none; flex-direction: row;}
@@ -339,13 +377,15 @@ a:hover {color: #ff5500;}
     position: absolute;
     align-items: center;
     justify-content: center;
-    right: -17.5vh;
+    right: -16.3vh;
     gap: 1vh;
     padding: 1vh 2vh 1vh 2vh;
     border-radius: 0vh 2vh 2vh 0vh;
-    background-color: #0055cc;
+    background-color: #0099ff;
+    border: solid 0.1vh #000000;
+    border-left: none;
     cursor: pointer;
-    z-index: 2;
+    
 }
 
 #bouton_mode_recherche_1
@@ -388,9 +428,11 @@ a:hover {color: #ff5500;}
 
 #bouton_recherche_1 {border: none; background-color: transparent;}
 
-#loupe_recherche_1 {height: 4.5vh; width: 4.5vh;}
+#loupe_recherche_1, #loupe_recherche_3 {height: 4.5vh; width: 4.5vh;}
 
-#tooltip_loupe {transform: translateX(-135%);}
+#loupe_recherche_3 {display: none;}
+
+#tooltip_loupe {transform: translateX(-135%) translateY(-4vh);}
 
 #flex_container_recherche_3, #flex_container_recherche_4, 
 #flex_container_recherche_5
@@ -419,6 +461,7 @@ a:hover {color: #ff5500;}
 {
     font-size: 1.3vh;
     font-family:'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /*font-family: "VT323";*/
     border-radius: 1vh;
     padding: 2vh 3vh 2vh 3vh;
     border: none; 
@@ -431,6 +474,7 @@ a:hover {color: #ff5500;}
     position: absolute;
     top: 7.5vh;
     right: 2vh;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 3vh;
     transform: scaleY(3) scaleX(1.5);
     cursor: pointer;
@@ -438,14 +482,25 @@ a:hover {color: #ff5500;}
 
 #bouton_mode_recherche_2:hover {color: #ff5500;}
 
+#barre_secondaire 
+{
+    margin-top: 20vh;
+    background-color: #00ff00; /*pour debbuger*/
+}
+
+#switch_1 {width: 5vh; height: 4vh; background-color: #ff5500;}
+
 #section_filtre
 {
-    /*display: none;*/
+    display: none;
     position: fixed; 
     top: 20%;
     width: 100%;
-    padding-top: 0vh;
-    background-color: #ffaa55;
+    padding-top: 1vh;
+    /*font-family: "VT323";*/
+    background-color: rgba(255, 170, 85, 1);
+    border: solid 0.1vh #000000;
+    /*background-color: #ffaa55;*/ /*pour debugger*/
     z-index: 2;
 }
 
@@ -462,7 +517,7 @@ a:hover {color: #ff5500;}
     padding-bottom: 2vh;
 }
 
-#flex_container_filtre_1 div b {font-size: 2vh;}
+#flex_container_filtre_1 div b {font-size: 2.5vh;}
 
 #flex_container_filtre_1 div select 
 {
@@ -472,18 +527,13 @@ a:hover {color: #ff5500;}
     border-radius: 1vh;
     font-size: 1.75vh;
     background-color: #ffffff;
+    box-shadow: 0vh 0vh 0.5vh #ffffff;
     cursor: pointer;
 }
 
-#flex_container_filtre_1 div select:hover {background-color: #ffffcc;}
+#flex_container_filtre_1 div select:hover {background-color: #fbfbb0; box-shadow: 0vh 0vh 1vh #ffff00;}
 
-#flex_container_filtre_1 div select:focus {background-color: #ffffff;}
-
-/*#filtre_specialite {background-color: #55ffbd;}*/
-
-/*#filtre_teletravail {background-color: #ff0000;}*/
-
-/*#filtre_langue {background-color: #ffff00;}*/
+#flex_container_filtre_1 div select:focus-visible {background-color: #fbfbb0;}
 
 
 
@@ -542,7 +592,16 @@ a:hover {color: #ff5500;}
     #x_2 {margin: 2vh 0vh 2vh 2vh;}
     #lien_burger_3 {display: flex; gap: 4vh;}
     #porte_sortie_1, #porte_sortie_2 {width: 3.5vh; height: 3.5vh;}
-    #flex_container_recherche_8 {flex-direction: column; transform: translateX(-100%);}
+    
+    #flex_container_recherche_8 
+    {
+        padding-bottom: 1vh;
+        flex-direction: column;
+        transform: translateX(-100%);
+        border: solid 0.1vh #000000;
+        border-right: none;
+    }
+    
     #flex_container_recherche_2 {display: none;}
 
     #flex_container_recherche_3, #flex_container_recherche_4, 
@@ -572,7 +631,7 @@ a:hover {color: #ff5500;}
 
 @media only screen and (max-width: 299px) and (orientation: portrait)
 {
-    body {background-color: #ff55bd;} /*pour debugger*/
+    /*body {background-color: #ff55bd;}*/ /*pour debugger*/
     #barre_recherche_offre_2, #barre_recherche_lieu_2 {width: 35vh;}
 }
 

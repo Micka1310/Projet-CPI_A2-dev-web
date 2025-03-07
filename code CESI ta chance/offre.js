@@ -152,7 +152,7 @@ function clique_bouton_x_3()
     lien_profil_2.style.transform = "translateX(100%)";
     profil_afficher = false;
     //pour debugger
-    console.log("fonction clique_bouton_x_3");
+    //console.log("fonction clique_bouton_x_3");
 }
 
 bouton_x_3.addEventListener("click", clique_bouton_x_3);
@@ -319,6 +319,104 @@ barre_recherche_lieu_1.addEventListener("input", allume_localisation_paysage);
 barre_recherche_lieu_2.addEventListener("input", allume_localisation_portrait);
 
 
+/*pour allumer/eteindre l'ombre derrière la barre de recherche lorsque 
+le champs de saisie de texte est prêt à recevoir du texte (paysage)*/
+const flex_container_recherche_2 = document.getElementById("flex_container_recherche_2");
+
+function allumer_barre_recherche_paysage ()
+{
+    flex_container_recherche_2.style.boxShadow = "0vh 0vh 0.8vh #ffff00";
+    //pour debugger
+    //console.log("allumer_barre_recherche_paysage");
+}
+
+function eteindre_barre_recherche_paysage ()
+{
+    flex_container_recherche_2.style.boxShadow = "0vh 0vh 0vh #ffff00";
+    //pour debugger
+    //console.log("eteindre_barre_recherche_paysage");
+}
+
+barre_recherche_offre_1.addEventListener("focus", allumer_barre_recherche_paysage);
+barre_recherche_offre_1.addEventListener("blur", eteindre_barre_recherche_paysage);
+barre_recherche_lieu_1.addEventListener("focus", allumer_barre_recherche_paysage);
+barre_recherche_lieu_1.addEventListener("blur", eteindre_barre_recherche_paysage);
+
+
+/*pour allumer/eteindre l'ombre derrière la barre de recherche lorsque 
+le champs de saisie de texte est prêt à recevoir du texte (portrait)*/
+const flex_container_recherche_3 = document.getElementById("flex_container_recherche_3");
+const flex_container_recherche_4 = document.getElementById("flex_container_recherche_4");
+
+function allumer_barre_recherche_3 ()
+{
+    flex_container_recherche_3.style.boxShadow = "0vh 0vh 1.5vh #ffff00";
+    //pour debugger
+    //console.log("allumer_barre_recherche_paysage");
+}
+
+function eteindre_barre_recherche_3 ()
+{
+    flex_container_recherche_3.style.boxShadow = "0vh 0vh 0vh #ffff00";
+    //pour debugger
+    //console.log("eteindre_barre_recherche_paysage");
+}
+
+function allumer_barre_recherche_4 ()
+{
+    flex_container_recherche_4.style.boxShadow = "0vh 0vh 1.5vh #ffff00";
+    //pour debugger
+    //console.log("allumer_barre_recherche_paysage");
+}
+
+function eteindre_barre_recherche_4 ()
+{
+    flex_container_recherche_4.style.boxShadow = "0vh 0vh 0vh #ffff00";
+    //pour debugger
+    //console.log("eteindre_barre_recherche_paysage");
+}
+
+barre_recherche_offre_2.addEventListener("focus", allumer_barre_recherche_3);
+barre_recherche_offre_2.addEventListener("blur", eteindre_barre_recherche_3);
+barre_recherche_lieu_2.addEventListener("focus", allumer_barre_recherche_4);
+barre_recherche_lieu_2.addEventListener("blur", eteindre_barre_recherche_4);
+
+
+/*pour changer d'image de loupe lorsque la souris 
+entre ou sort de l'image (paysage)*/
+const loupe_recherche_1 = document.getElementById("loupe_recherche_1");
+const loupe_recherche_3 = document.getElementById("loupe_recherche_3");
+
+let loupe_recherche_1_afficher = true;
+let loupe_recherche_3_afficher = false;
+
+function allumer_loupe ()
+{
+    if (loupe_recherche_1_afficher)
+    {
+        loupe_recherche_1.style.display = "none"
+        loupe_recherche_1_afficher = false;
+        loupe_recherche_3.style.display = "flex"
+        loupe_recherche_3_afficher = true;
+        //pour debugger
+        //console.log("allume_loupe : loupe_recherche_1_afficher");
+    }
+
+    else
+    {
+        loupe_recherche_1.style.display = "flex"
+        loupe_recherche_1_afficher = true;
+        loupe_recherche_3.style.display = "none"
+        loupe_recherche_3_afficher = false;
+        //pour debugger
+        //console.log("allume_loupe : else");
+    }
+}
+
+loupe_recherche_1.addEventListener("mouseenter", allumer_loupe);
+loupe_recherche_3.addEventListener("mouseleave", allumer_loupe);
+
+
 /*pour afficher/cacher la barre de recherche de stage 
 en cliquant sur l'élément "recherche" ou ">" (portrait)*/
 const flex_container_recherche_8 = document.getElementById("flex_container_recherche_8");
@@ -383,10 +481,10 @@ function changement_mode()
             lien_burger_1.style.display = "none";
         }
 
-        lien_profil_1.style.boxShadow = "0vh 0vh 1.25vh #ff0000;";
-        lien_profil_2.style.boxShadow = "0vh 0vh 1.25vh #ff0000;";
-        lien_burger_1.style.boxShadow = "0vh 0vh 1.25vh #0099ff";
-        lien_burger_2.style.boxShadow = "0vh 0vh 1.25vh #0099ff";
+        lien_profil_1.style.boxShadow = "0vh 0vh 2vh #ffff00;";
+        lien_profil_2.style.boxShadow = "0vh 0vh 2vh #ffff00;";
+        lien_burger_1.style.boxShadow = "0vh 0vh 2vh #ffff00";
+        lien_burger_2.style.boxShadow = "0vh 0vh 2vh #ffff00";
 
         flex_container_recherche_8.style.display = "none";
         //pour debugger
@@ -403,11 +501,6 @@ function changement_mode()
         lien_burger_2.style.display = "none";
         lien_burger_1.style.display = "flex";
         lien_afficher = false;
-
-        lien_profil_1.style.boxShadow = "0vh 0vh 0vh;";
-        lien_profil_2.style.boxShadow = "0vh 0vh 0vh";
-        lien_burger_1.style.boxShadow = "0vh 0vh 0vh";
-        lien_burger_2.style.boxShadow = "0vh 0vh 0vh";
 
         flex_container_recherche_8.style.display = "flex";
         //pour debugger

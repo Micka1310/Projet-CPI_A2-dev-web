@@ -19,12 +19,14 @@
     </head>
 
     <body>
+        <div id="arriere_plan"></div>
+
         <header>
             
             <!--affichage principal de l'en-tête-->
             <div class="flex_container" id="flex_container_1">
                 <nav>
-                    <a id="a_logo" href="offre.html"><img id="logo" src="images/logo.png" alt="logo"></a>
+                    <a id="a_logo" href="offre.html"><img id="logo" src="images/logo_2.png" alt="logo"></a>
                 </nav>
 
                 <div class="flex_container" id="flex_container_2">
@@ -144,6 +146,7 @@
 
                         <button class="tooltip" id="bouton_recherche_1" type="submit">
                             <img id="loupe_recherche_1" src="images/loupe.png" alt="loupe">
+                            <img id="loupe_recherche_3" src="images/loupe_allumer.png" alt="loupe">
                             <span class="tooltip_text_gauche" id="tooltip_loupe">bouton recherche</span>
                         </button>
                     </div>
@@ -180,13 +183,19 @@
             </section>
 
 
+            <!--barres secondaire-->
+            <section id="barre_secondaire">
+                <div id="switch_1"></div>
+            </section>
+
+
             <!--barres de filtre pour les offres-->
             <section id="section_filtre">
                 <div class="flex_container" id="flex_container_filtre_1">
-                    <div class="flex_container" id="filtre_specialite">
-                        <b>Specialité :</b>
+                    <div class="flex_container">
+                        <b id="b_specialite">Specialité :</b>
 
-                        <select>
+                        <select id="filtre_specialite">
                             <option>Tout</option>
                             <option>Généraliste</option>
                             <option>BTP</option>
@@ -195,10 +204,10 @@
                         </select>
                     </div>
 
-                    <div class="flex_container" id="filtre_teletravail">
-                        <b>Télétravail :</b>
+                    <div class="flex_container">
+                        <b id="b_teletravail">Télétravail :</b>
 
-                        <select>
+                        <select id="filtre_teletravail">
                             <option>Tout</option>
                             <option>Oui</option>
                             <option>Non</option>
@@ -206,9 +215,9 @@
                     </div>
 
                     <div class="flex_container">
-                        <b>Durée :</b>
+                        <b id="b_duree">Durée :</b>
 
-                        <select>
+                        <select id="filtre_duree">
                             <option>Tout</option>
                             <option>2 mois ou moins</option>
                             <option>3 mois</option>
@@ -219,9 +228,9 @@
                     </div>
 
                     <div class="flex_container">
-                        <b>Contrat :</b>
+                        <b id="b_contrat">Contrat :</b>
 
-                        <select>
+                        <select id="filtre_contrat">
                             <option>Tout</option>
                             <option>Stage</option>
                             <option>Alternance</option>
@@ -229,9 +238,9 @@
                     </div>
 
                     <div class="flex_container">
-                        <b>Niveau d'étude :</b>
+                        <b id="b_niveau_etude">Niveau d'étude :</b>
 
-                        <select>
+                        <select id="filtre_niveau_etude">
                             <option>Tout</option>
                             <option>Aucun</option>
                             <option>Bac +2</option>
@@ -243,9 +252,9 @@
                     </div>
 
                     <div class="flex_container">
-                        <b>Salaire :</b>
+                        <b id="b_salaire">Salaire :</b>
 
-                        <select>
+                        <select id="filtre_salaire">
                             <option>Tout</option>
                             <option>+80€</option>
                             <option>+1200€</option>
@@ -255,9 +264,9 @@
                     </div>
 
                     <div class="flex_container" id="filtre_langue">
-                        <b>Langue :</b>
+                        <b id="b_langue">Langue :</b>
 
-                        <select>
+                        <select id="filtre_langue">
                             <option>Tout</option>
                             <option>Français</option>
                             <option>Anglais</option>
