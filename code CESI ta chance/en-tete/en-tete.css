@@ -1,5 +1,6 @@
 /*CSS de l'en-tete pour le projet dev web à CESI*/
 
+/*CSS de l'en-tête*/
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Gelasio:ital,wght@0,400..700;1,400..700&family=Pacifico&family=VT323&display=swap');
 
 *
@@ -9,16 +10,18 @@
     box-sizing: border-box;
 }
 
+.desactivation_transition * {transition: none !important;}
+
 html, body 
 {
     width: 100%;
     height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "VT323";
 }
 
 #arriere_plan
 {
-    position: fixed;        /* Fixe cet élément sur toute la fenêtre */
+    position: fixed;
     top: 11%;
     left: 0;
     width: 100%;
@@ -43,11 +46,12 @@ header
     background-image: url("../images/arriere_plan_header.jpg");
     background-size: contain;
     background-position: center;
-    font-family: "VT323";
+    /*font-family: "VT323";*/
     box-shadow: 0vh 0vh 1vh #ffffff;
+    transition: 0.3s ease-in-out;
 }
 
-header:hover {box-shadow: 0vh 0vh 1vh #ffff00;}
+header:hover {box-shadow: 0vh 0vh 2vh 1.5vh #ffff00;}
 
 a {color: #5500cc;}
 
@@ -118,7 +122,7 @@ a:hover {color: #ff5500;}
 
 #profil_1 {width: 8vh; height: 8vh;}
 
-.tooltip {display: inline-block;}
+.tooltip {display: inline-block; position: relative;}
 
 .tooltip_text_gauche
 {
@@ -175,7 +179,7 @@ a:hover {color: #ff5500;}
     outline-style: solid;
     outline-width: 0.3vh;
     border: #000000;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.9);
     z-index: 2;
 }
 
@@ -191,7 +195,7 @@ a:hover {color: #ff5500;}
     width: 80%;
     font-size: 3vh;
     border: black solid 0.5vh;
-    background-color: #ffffff;
+    background: linear-gradient(to bottom, rgba(255, 85, 189, 0.9), rgba(255, 255, 255, 0.9));
     transform: translateX(100%);
     transition: transform 0.5s ease;
     z-index: 2;
@@ -265,7 +269,7 @@ a:hover {color: #ff5500;}
     outline-style: solid;
     outline-width: 0.3vh;
     border: #000000;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.9);
     z-index: 2;
 }
 
@@ -305,6 +309,7 @@ a:hover {color: #ff5500;}
 
 
 
+/*responsive avec l'orientation en mode portrait*/
 @media only screen and (orientation: portrait) 
 {
     /*body {background-color: #ffbdf9;/*} /*pour debugger*/
@@ -371,6 +376,7 @@ a:hover {color: #ff5500;}
 
 
 
+/*responsive avec l'orientation en mode paysage*/
 @media only screen and (orientation: landscape)
 {
     /*body {background-color: #ffdbbd;}*/ /*pour debugger*/
