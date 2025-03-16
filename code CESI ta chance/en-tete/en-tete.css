@@ -41,6 +41,10 @@ header
     padding-top: 1vh;
     padding-bottom: 0.5vh;
     z-index: 10;
+    height: 11%;
+    padding-top: 1vh;
+    padding-bottom: 0.5vh;
+    z-index: 10;
     /*opacity: 0.2;*/ /*pour debugger*/
     /*background-color: #aaaaaa;*/ /*pour debugger*/
     background-image: url("../images/arriere_plan_header.jpg");
@@ -96,8 +100,11 @@ a:hover {color: #ff5500;}
 
 #flex_container_2 nav a {color: aquamarine;}
 
+#flex_container_2 nav a {color: aquamarine;}
+
 #flex_container_2 a {font-size: 3vh; transition: 0.3s ease-in-out, transform 0.2s ease-in-out;}
 
+#flex_container_2 a:hover {transform: scale(1.1); color: #ffdd00;}
 #flex_container_2 a:hover {transform: scale(1.1); color: #ffdd00;}
 
 .lien {text-decoration: none;}
@@ -166,7 +173,15 @@ a:hover {color: #ff5500;}
     color: aquamarine;
     /*background-color: aquamarine;*/ /*pour debugger*/
 }
+#bouton_burger_1 
+{
+    font-size: 5vh;
+    cursor: pointer;
+    color: aquamarine;
+    /*background-color: aquamarine;*/ /*pour debugger*/
+}
 
+#bouton_burger_1:hover {color: #ffdd00;}
 #bouton_burger_1:hover {color: #ffdd00;}
 
 #lien_profil_1
@@ -192,6 +207,7 @@ a:hover {color: #ff5500;}
     flex-direction: column;
     top: -1%;
     right: -3%;
+    right: -3%;
     width: 80%;
     font-size: 3vh;
     border: black solid 0.5vh;
@@ -203,6 +219,9 @@ a:hover {color: #ff5500;}
 
 #lien_profil_2 {padding: 3vh; gap: 3vh;}
 
+#lien_profil_1, #lien_profil_2,
+#lien_burger_1, #lien_burger_2 
+{box-shadow: 0vh 0vh 2vh #ffff00;} 
 #lien_profil_1, #lien_profil_2,
 #lien_burger_1, #lien_burger_2 
 {box-shadow: 0vh 0vh 2vh #ffff00;} 
