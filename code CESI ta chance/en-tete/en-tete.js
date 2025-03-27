@@ -33,7 +33,7 @@ function clique_burger_1()
             lien_burger_1.style.transform = "translateX(0%)";
             lien_afficher = true;
             //pour debugger
-            console.log("fonction clique_burger_1 : !lien_afficher -> verif_mode_paysage && height < 600 && width < 940");
+            //console.log("fonction clique_burger_1 : !lien_afficher -> verif_mode_paysage && height < 600 && width < 940");
         }
 
         //version dekstop
@@ -45,7 +45,7 @@ function clique_burger_1()
             lien_afficher = true;
             profil_afficher = false;
             //pour debugger
-            console.log("fonction clique_burger_1 : !lien_afficher -> verif_mode_paysage");
+            //console.log("fonction clique_burger_1 : !lien_afficher -> verif_mode_paysage");
         }
 
         //version mobile
@@ -54,7 +54,7 @@ function clique_burger_1()
             lien_burger_1.style.transform = "translateX(0%)";
             lien_afficher = true;
             //pour debugger
-            console.log("fonction clique_burger_1 : !lien_afficher -> boucle else");
+            //console.log("fonction clique_burger_1 : !lien_afficher -> boucle else");
         }
     }
 
@@ -66,7 +66,7 @@ function clique_burger_1()
             lien_burger_2.style.display = "none";
             lien_afficher = false;
             //pour debugger
-            console.log("fonction clique_burger_1 : boucle else -> verif_mode_paysage");
+            //console.log("fonction clique_burger_1 : boucle else -> verif_mode_paysage");
         }
     }
 }
@@ -81,7 +81,7 @@ function clique_bouton_x_2()
     lien_burger_1.style.transform = "translateX(100%)";
     lien_afficher = false;
     //pour debugger
-    console.log("fonction clique_bouton_x_2");
+    //console.log("fonction clique_bouton_x_2");
 }
 
 bouton_x_2.addEventListener("click", clique_bouton_x_2);
@@ -105,7 +105,7 @@ function clique_profil()
             lien_profil_2.style.transform = "translateX(0%)";
             profil_afficher = true;
             //pour debugger
-            console.log("fonction clique_profil : !profil_afficher -> verif_mode_paysage && height < 600 && width < 940");
+            //console.log("fonction clique_profil : !profil_afficher -> verif_mode_paysage && height < 600 && width < 940");
         }
 
         //version dekstop
@@ -116,7 +116,7 @@ function clique_profil()
             profil_afficher = true;
             lien_afficher = false;
             //pour debugger
-            console.log("fonction clique_profil : !profil_afficher -> verif_mode_paysage");
+            //console.log("fonction clique_profil : !profil_afficher -> verif_mode_paysage");
         }
 
         //version mobile
@@ -125,7 +125,7 @@ function clique_profil()
             lien_profil_2.style.transform = "translateX(0%)";
             profil_afficher = true;
             //pour debugger
-            console.log("fonction clique_profil : !profil_afficher -> boucle else");
+            //console.log("fonction clique_profil : !profil_afficher -> boucle else");
         }
     }
 
@@ -137,7 +137,7 @@ function clique_profil()
             lien_profil_1.style.display = "none";
             profil_afficher = false;
             //pour debugger
-            console.log("fonction clique_profil : boucle else");
+            //console.log("fonction clique_profil : boucle else");
         }
     }
 }
@@ -152,7 +152,7 @@ function clique_bouton_x_3()
     lien_profil_2.style.transform = "translateX(100%)";
     profil_afficher = false;
     //pour debugger
-    console.log("fonction clique_bouton_x_3");
+    //console.log("fonction clique_bouton_x_3");
 }
 
 bouton_x_3.addEventListener("click", clique_bouton_x_3);
@@ -177,7 +177,7 @@ function clique_page_1 (cible)
         lien_burger_2.style.display = "none";
         lien_afficher = false;
         //pour debugger
-        console.log("clique_page_1 : lien_afficher");
+        //console.log("clique_page_1 : lien_afficher");
     }
 
     if 
@@ -193,7 +193,7 @@ function clique_page_1 (cible)
         lien_profil_1.style.display = "none";
         profil_afficher = false;
         //pour debugger
-        console.log("clique_page_1 : profil_afficher");
+        //console.log("clique_page_1 : profil_afficher");
     }
 }
 
@@ -215,7 +215,7 @@ function changement_mode()
             lien_burger_2.style.display = "none";
             lien_afficher = false;
             //pour debugger
-            console.log("changement_mode : verif_mode -> profil_afficher || lien_afficher");
+            //console.log("changement_mode : verif_mode -> profil_afficher || lien_afficher");
         }
 
         if (window.innerHeight < 600 && window.innerWidth < 940)
@@ -235,7 +235,7 @@ function changement_mode()
         lien_burger_1.style.boxShadow = "0vh 0vh 2vh #ffff00";
         lien_burger_2.style.boxShadow = "0vh 0vh 2vh #ffff00";
         //pour debugger
-        console.log("L'écran est maintenant en mode paysage");
+        //console.log("L'écran est maintenant en mode paysage");
     }
 
     //passage en mode portrait
@@ -244,12 +244,13 @@ function changement_mode()
         lien_profil_1.style.display = "none";
         lien_profil_2.style.display = "flex";
         profil_afficher = false;
+        
         lien_burger_2.style.display = "none";
         lien_burger_1.style.display = "flex";
         lien_afficher = false;
         //pour debugger
-        console.log("changement_mode : boucle else");
-        console.log("L'écran est maintenant en mode portrait");
+        //console.log("changement_mode : boucle else");
+        //console.log("L'écran est maintenant en mode portrait");
     }
 }
 
