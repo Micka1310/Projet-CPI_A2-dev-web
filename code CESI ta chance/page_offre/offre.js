@@ -1,6 +1,6 @@
 /*JS de la page d'offre pour le projet dev web à CESI*/
 
-const bouton_burger_1 = document.getElementById("bouton_burger_1");
+/*const bouton_burger_1 = document.getElementById("bouton_burger_1");
 const lien_burger_2 = document.getElementById("lien_burger_2");
 const lien_burger_1 = document.getElementById("lien_burger_1");
 const lien_profil_1 = document.getElementById("lien_profil_1");
@@ -12,12 +12,12 @@ const bouton_x_3 = document.getElementById("x_3");
 let profil_afficher = false;
 let lien_afficher = false;
 let mode_portrait = window.matchMedia("(orientation: portrait)");
-let mode_paysage = window.matchMedia("(orientation: landscape)");
+let mode_paysage = window.matchMedia("(orientation: landscape)");*/
 
 
 /*pour faire apparaître/disparaitre les liens secondaires du bouton burger 
 en appuyant sur le bouton burger*/
-function clique_burger_1()
+/*function clique_burger_1()
 {
     let verif_mode_paysage = window.matchMedia("(orientation: landscape)").matches;
     
@@ -75,12 +75,12 @@ function clique_burger_1()
     }
 }
 
-bouton_burger_1.addEventListener("click", clique_burger_1);
+bouton_burger_1.addEventListener("click", clique_burger_1);*/
 
 
 /*pour faire disparaitre les liens secondaires du bouton burger 
 en appuyant sur la croix (mode portrait)*/
-function clique_bouton_x_2()
+/*function clique_bouton_x_2()
 {
     lien_burger_1.style.transform = "translateX(100%)";
     lien_afficher = false;
@@ -89,12 +89,12 @@ function clique_bouton_x_2()
     //console.log("fonction clique_bouton_x_2");
 }
 
-bouton_x_2.addEventListener("click", clique_bouton_x_2);
+bouton_x_2.addEventListener("click", clique_bouton_x_2);*/
 
 
 /*pour faire apparaître/disparaitre le nom/prenom de l'utilisateur et l'option 
 de deconnexion en appuyant sur le profil*/
-function clique_profil()
+/*function clique_profil()
 {
     let verif_mode_paysage = window.matchMedia("(orientation: landscape)").matches;
 
@@ -151,12 +151,12 @@ function clique_profil()
     }
 }
 
-profil_1.addEventListener("click", clique_profil);
+profil_1.addEventListener("click", clique_profil);*/
 
 
 /*pour faire disparaitre le nom/prenom de l'utilisateur et l'option de deconnexion 
 en appuyant sur la croix (mode portrait)*/
-function clique_bouton_x_3()
+/*function clique_bouton_x_3()
 {
     lien_profil_2.style.transform = "translateX(100%)";
     profil_afficher = false;
@@ -165,18 +165,18 @@ function clique_bouton_x_3()
     //console.log("fonction clique_bouton_x_3");
 }
 
-bouton_x_3.addEventListener("click", clique_bouton_x_3);
+bouton_x_3.addEventListener("click", clique_bouton_x_3);*/
 
 
 /*pour faire disparaître les affichages du bouton profil/burger
 lorsque l'on clique autre part dans la page que ces affichages (mode paysage)*/
-function clique_page_1(cible)
+/*function clique_page_1(cible)
 {
     let verif_mode_paysage = window.matchMedia("(orientation: landscape)").matches;
     
     if 
     (
-        lien_afficher/* == true*/ 
+        lien_afficher  //== true 
         && !lien_burger_2.contains(cible.target) 
         && !bouton_burger_1.contains(cible.target) 
         && verif_mode_paysage
@@ -209,7 +209,7 @@ function clique_page_1(cible)
     }
 }
 
-document.addEventListener("click", clique_page_1);
+document.addEventListener("click", clique_page_1);*/
 
 
 /*pour changer d'image d'ampoule dans la barre de recherche 
@@ -1035,7 +1035,7 @@ function changement_mode()
     //passage en mode paysage
     if (verif_mode_paysage) 
     {
-        if (profil_afficher || lien_afficher)
+        /*if (profil_afficher || lien_afficher)
         {
             lien_profil_1.style.display = "none";
             profil_afficher = false;
@@ -1061,7 +1061,7 @@ function changement_mode()
         lien_profil_1.style.boxShadow = "0vh 0vh 2vh #ffff00;";
         lien_profil_2.style.boxShadow = "0vh 0vh 2vh #ffff00;";
         lien_burger_1.style.boxShadow = "0vh 0vh 2vh #ffff00";
-        lien_burger_2.style.boxShadow = "0vh 0vh 2vh #ffff00";
+        lien_burger_2.style.boxShadow = "0vh 0vh 2vh #ffff00";*/
 
         section_recherche.style.position = "relative";
         section_recherche.style.marginTop = "12vh";
@@ -1085,13 +1085,13 @@ function changement_mode()
     //passage en mode portrait
     else 
     {
-        lien_profil_1.style.display = "none";
+        /*lien_profil_1.style.display = "none";
         lien_profil_2.style.display = "flex";
         profil_afficher = false;
 
         lien_burger_2.style.display = "none";
         lien_burger_1.style.display = "flex";
-        lien_afficher = false;
+        lien_afficher = false;*/
 
         section_recherche.style.position = "fixed";
         section_recherche.style.top = "10%";
