@@ -1,0 +1,139 @@
+/*CSS de l'en-tete pour le projet dev web à CESI*/
+
+
+video {
+    display:block;
+    width: 88vw;
+    height: 51vh;
+    margin: 13vh auto 10px auto;
+}
+
+
+.story {
+    font-family: "VT323";
+    font-size: 18px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(to bottom, rgba(15, 82, 125, 1), rgba(255, 85, 189, 1));
+
+    box-shadow: 0 0 13px rgb(255, 255, 255);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h1, h2 {
+    color: #000000d5;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.mission {
+    background: #f7f7cc;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0px 7px rgba(0, 183, 255, 0.932);
+}
+
+p {
+    line-height: 1.6;
+    text-align: justify;
+}
+
+
+
+/* PAGE CGU */
+.container {
+    padding-top: 150px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 85px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.section h2 {
+    margin: 0;
+    font-size: 25px;
+    color: #333;
+}
+
+.section h3 {
+    margin: 0;
+    padding: 10px;
+    font-size: 22px;
+    color: #333;
+}
+
+.section li {
+    line-height: 17px;
+    margin: auto;
+    text-align: justify;
+}
+
+.content {
+    display: none;
+    margin-top: 10px;
+    font-size: 17px;
+    color: #555;
+    text-align: left;
+}
+
+
+
+/* Partie Responsive */
+
+@media (max-width: 768px) {
+    .footer-links {
+        display: none; 
+    }
+
+    .footer-links-list {
+        display: block; 
+    }
+
+    .social-media {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .social-media img {
+        width: 25px;
+    }
+
+    .copyright {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 10px;
+    }
+
+    .footer-links-list a {
+        font-size: 14px;
+    }
+
+    .social-media img {
+        width: 20px;
+    }
+
+    .copyright {
+        font-size: 10px;
+    }
+}

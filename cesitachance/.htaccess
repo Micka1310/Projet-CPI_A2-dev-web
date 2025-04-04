@@ -1,0 +1,20 @@
+<IfModule mod_mime.c>
+    AddType application/x-httpd-php .html .htm
+</IfModule>
+
+# Redirection permanente de accueil.html vers index.html
+Redirect 301 /accueil.html /index.html
+
+# Redirection de contact.html vers maintenance.html
+Redirect 301 /public/views/contact.html /public/views/maintenance.html
+
+# Redirection de newsletter.html vers maintenance.html
+Redirect 301 /public/views/newsletter.html /public/views/maintenance.html
+
+Redirect 301 "/public/views/page entreprise1.1.html" "/public/views/entreprise.html"
+
+
+
+
+
+

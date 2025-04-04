@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Expériences - CESI Ta Chance</title>
+
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style_about.css">
+    <link href="../css/en-tete.css" rel="stylesheet" type="text/css">
+    <link href="../css/footer.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <div id="arriere_plan"></div>
+
+    <!-- Notification - Accès Refusé -->
+    <div id="notification"></div>
+
+    <!-- ✅ Notification de succès -->
+    <div id="success-notification" class="notification success"></div>
+    
+        <!--En-tête commun à toute les pages-->
+        <header>
+            
+            <!--affichage principal de l'en-tête-->
+            <div class="flex_container" id="flex_container_1">
+                <nav>
+                    <a id="a_logo" href="../../index.html"><img id="logo" src="../assets/logo_2.png" alt="logo"></a>
+                </nav>
+
+                <div class="flex_container" id="flex_container_2">
+                    <nav>
+                        <a class="lien" href="page entreprise1.1.html"><b>Entreprise</b></a>
+                        <a class="lien" href="offre.html"><b>Offre</b></a>
+                        <a class="lien" href="about.html"><b>A propos de nous</b></a>
+                    </nav>
+                </div>
+                
+                <div class="flex_container" id="flex_container_3">
+                    <div class="tooltip" id="profil_1">
+                        <span class="tooltip_text_gauche" id="tooltip_profil">Vous êtes connecté</span>
+                    </div>
+
+                    <div id="modalConnexion" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <iframe src="connexion.html" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+                    <nav>
+                        <a id="connexion" href="connexion.html"><b>Connexion</b></a>
+                    </nav>
+
+                    <p class="tooltip" id="bouton_burger_1"><b>☰</b>
+                        <span class="tooltip_text_gauche" id="tooltip_burger">Liens de navigation</span>
+                    </p>
+                </div>
+            </div>
+
+            <!--affichage du nom/prenom et option de deconnexion apres appuie sur le profil (paysage)-->
+            <div class="flex_container" id="lien_profil_1">
+                <span>Connecter en tant que :</span>
+
+                <div id="nom_prenom_lien_profil_1">
+                    <span><b>Nom</b></span>
+                    <span><b>Prénom</b></span>
+                </div>
+
+                <div class="flex_container" id="flex_container_4">
+                    <nav>
+                        <a class="lien_deconnexion" href="#"><b>Déconnexion</b></a>
+                        <img id="porte_sortie_1" src="../assets/porte_sortie.png" alt="logo">
+                    </nav>
+                </div>
+            </div>
+
+            <!--affichage de liens secondaire apres appuie du bouton burger (paysage)-->
+            <div class="flex_container" id="lien_burger_2">
+                <nav>
+                    <a class="lien" href="stat.html"><b>Statistique</b></a>
+                    <a class="lien" href="wishlist.html"><b>Wish list</b></a>
+                    <a class="lien" href="petudiant.html" data-role="admin,pilote" ><b>Étudiant</b></a>
+                    <a class="lien" href="ppilote.html" data-role="admin" ><b>Pilote</b></a>
+                </nav>
+
+                <!--affichage de liens secondaire supplementaire apres appuie du bouton burger (paysage)-->
+                <div class="flex_container" id="lien_burger_3">
+                    <nav>
+                        <a class="lien" href="page entreprise1.1.html"><b>Entreprise</b></a>
+                        <a class="lien" href="offre.html"><b>Offre</b></a>
+                        <a class="lien" href="about.html"><b>A propos de nous</b></a>
+                    </nav>
+                </div>
+            </div>
+
+            <!--affichage du nom/prenom et option de deconnexion apres appuie sur le profil (portrait)-->
+            <div class="flex_container" id="lien_profil_2">
+                <span id="x_3">✖</span>
+                <span>Connecter en tant que :</span>
+
+                <div id="nom_prenom_lien_profil_2">
+                    <span><b>Nom</b></span>
+                    <span><b>Prénom</b></span>
+                </div>
+
+                <div class="flex_container" id="flex_container_5">
+                    <nav>
+                        <a class="lien_deconnexion"  href="#"><b>Déconnexion</b></a>
+                        <img id="porte_sortie_2" src="../assets/porte_sortie.png" alt="logo">
+                    </nav>
+                </div>
+            </div>
+
+            <!--affichage de liens secondaire apres appuie du bouton burger (portrait)-->
+            <div class="flex_container" id="lien_burger_1">
+                <span id="x_2">✖</span>
+
+                <nav>
+                    <a class="lien" href="stat.html"><b>Statistique</b></a>
+                    <a class="lien" href="wishlist.html"><b>Wish list</b></a>
+                    <a class="lien" href="petudiant.html" data-role="admin,pilote" ><b>Étudiant</b></a>
+                    <a class="lien" href="ppilote.html" data-role="admin" ><b>Pilote</b></a>
+                </nav>
+
+                <!--affichage de liens secondaire supplementaire apres appuie du bouton burger (portrait)-->
+                <div class="flex_container" id="lien_burger_3">
+                    <nav>
+                        <a class="lien" href="page entreprise1.1.html"><b>Entreprise</b></a>
+                        <a class="lien" href="offre.html"><b>Offre</b></a>
+                        <a class="lien" href="about.html"><b>A propos de nous</b></a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+    <div class="container">
+
+        <div class="section" onclick="toggleContent(this)">
+            <h2>📌 Mentions Légales</h2>
+            <div class="content">
+                <p><strong>Éditeur du site :</strong> CESI Ta Chance</p>
+                <p><strong>Statut juridique :</strong> SASU </p>
+                <p><strong>Siège social :</strong> 93 Boulevard de le Seine </p>
+                <p><strong>Numéro SIRET :</strong> 2165 6165 1654 1617</p>
+                <p><strong>Responsable de la publication :</strong> MOUTTAPPA Thomas</p>
+                <p><strong>Email de contact :</strong> cesitachance@cesi.fr</p>
+                <p><strong>Hébergeur :</strong> Azure – Microsoft Azure Service</p>
+            </div>
+        </div>
+
+        <div class="section" onclick="toggleContent(this)">
+            <h2>📜 Conditions Générales d'Utilisation</h2>
+            <div class="content">
+                <h3>2.1 Objet du site</h3>
+                <p>Le site <strong>CESI Ta Chance</strong> a pour vocation d'aider les étudiants du CESI à trouver un stage en facilitant la mise en relation avec des entreprises proposant des offres.</p>
+            
+                <h3>2.2 Accès et inscription</h3>
+                <ul>
+                    <li>L'accès au site est gratuit pour les étudiants et les entreprises.</li>
+                    <li>Les étudiants doivent créer un compte avec des informations exactes pour accéder aux offres de stage.</li>
+                    <li>Les entreprises doivent également créer un compte pour publier des offres et contacter les étudiants.</li>
+                </ul>
+            
+                <h3>2.3 Responsabilités</h3>
+                <p>L’éditeur du site ne peut être tenu responsable du contenu des offres publiées par les entreprises ni des échanges entre recruteurs et étudiants.</p>
+                <p>Les utilisateurs s’engagent à ne pas publier de contenus illégaux, diffamatoires ou contraires aux lois en vigueur.</p>
+            
+                <h3>2.4 Suppression de compte</h3>
+                <p>Les utilisateurs peuvent demander la suppression de leur compte à tout moment via leur espace personnel ou en envoyant un email à support@cesitachance.fr.</p>
+            </div>
+        </div>
+
+        <div class="section" onclick="toggleContent(this)">
+            <h2>🔐 Politique de Confidentialité</h2>
+            <div class="content">
+                <h3>3.1 Collecte des données</h3>
+                <p>Nous collectons les informations suivantes lorsque vous utilisez notre site :</p>
+                <ul>
+                    <li>Informations de compte : nom, prénom, email, CV, compétences.</li>
+                    <li>Informations de navigation : adresse IP, type de navigateur, durée de connexion.</li>
+                    <li>Données d'interaction : messages envoyés aux entreprises ou aux étudiants.</li>
+                </ul>
+            
+                <h3>3.2 Utilisation des données</h3>
+                <p>Les données collectées sont utilisées pour :</p>
+                <ul>
+                    <li>Permettre la mise en relation entre étudiants et entreprises.</li>
+                    <li>Améliorer l’expérience utilisateur et optimiser les services.</li>
+                    <li>Respecter les obligations légales et assurer la sécurité du site.</li>
+                </ul>
+            
+                <h3>3.3 Stockage et durée de conservation</h3>
+                <p>Vos données sont stockées sur des serveurs sécurisés et conservées :</p>
+                <ul>
+                    <li>Pendant toute la durée de votre inscription.</li>
+                    <li>Jusqu'à 12 mois après la suppression du compte, sauf obligations légales contraires.</li>
+                </ul>
+            
+                <h3>3.4 Droits des utilisateurs (RGPD)</h3>
+                <p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :</p>
+                <ul>
+                    <li><strong>Droit d’accès :</strong> Vous pouvez demander une copie des données vous concernant.</li>
+                    <li><strong>Droit de rectification :</strong> Vous pouvez corriger des informations erronées.</li>
+                    <li><strong>Droit à l’effacement :</strong> Vous pouvez demander la suppression de vos données.</li>
+                    <li><strong>Droit à la portabilité :</strong> Vous pouvez récupérer vos données dans un format structuré.</li>
+                    <li><strong>Droit d’opposition :</strong> Vous pouvez refuser l’utilisation de vos données à certaines fins.</li>
+                </ul>
+                <p>Pour exercer ces droits, contactez-nous à support@cesitachance.fr . Une preuve d’identité pourra être demandée.</p>
+            </div>
+        </div>
+
+        <div class="section" onclick="toggleContent(this)">
+            <h2>🍪 Politique de Cookies</h2>
+            <div class="content">
+                <h3>4.1 Définition</h3>
+                <p>Les cookies sont des fichiers stockés sur votre appareil pour améliorer votre navigation et analyser l’utilisation du site.</p>
+            
+                <h3>4.2 Types de cookies utilisés</h3>
+                <ul>
+                    <li><strong>Cookies essentiels :</strong> Indispensables pour le bon fonctionnement du site.</li>
+                    <li><strong>Cookies analytiques :</strong> Utilisés pour mesurer l’audience et améliorer les services.</li>
+                    <li><strong>Cookies tiers :</strong> Possibles interactions avec des services externes (Google Analytics, réseaux sociaux, etc.).</li>
+                </ul>
+            
+                <h3>4.3 Gestion des cookies</h3>
+                <p>Lors de votre première visite, un bandeau vous informe de l’utilisation des cookies et vous permet de paramétrer vos préférences.</p>
+                <p>Vous pouvez également gérer vos préférences à tout moment via les paramètres de votre navigateur.</p>
+
+                <h3>4.4 Modification des conditions</h2>
+                    <p>Nous nous réservons le droit de modifier ces mentions légales, CGU et politique de confidentialité. Toute modification sera notifiée aux utilisateurs via le site.</p></h3>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <footer>
+        <div class="footer">
+            <div class="footer-links">
+                <a href="../../index.html">Accueil</a>
+                <a href="offre.html"> Offres</a>
+                <a href="page entreprise1.1.html"> Entreprises </a>
+                <a href="about.html"> A propos</a>
+                <a href="contact.html">Nous contacter</a>
+                <a href="cgu.html">Mentions légales</a>
+                <a href="newsletter.html">Newsletter</a>
+            </div>
+            <ul id="footer-links-list" class="footer-links-list">
+                <li><a href="../../index.html">Accueil</a></li>
+                <li><a href="offre.html">Offres</a></li>
+                <li><a href="page entreprise1.1.html">Entreprises</a></li>
+                <li><a href="about.html">A propos</a></li>
+                <li><a href="contact.html">Nous contacter</a></li>
+                <li><a href="cgu.html">Mentions légales</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+            </ul>
+            <div class="social-media">
+                <a href="#"><img src="../assets/eth.png" alt="CESI Ta Chance Web 3"></a>
+                <a href="#"><img src="../assets/twitter.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/cesi_ta_chance/"><img src="../assets/instagram.png" alt="Instagram"></a>
+            </div>
+            <p class="copyright"> <span class="cr"> &copy </span> CESI Ta Chance - 2025 Tous droits réservés.</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>
+
+<script src="../js/about.js"></script>
+<script src="../js/en-tete.js"></script>
+<script src="../js/footer.js"></script>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de connexion - CESI Ta Chance</title>
+    <link rel="stylesheet" href="../css/style_login.css">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <form id="login-form">
+        <h1>Se Connecter</h1>
+        <div class="inputs">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Mot de passe" required>
+        </div>
+        <div class="login">
+            <button type="submit">Se connecter</button>
+        </div>
+
+        <p class="inscription">Pas de compte ? Je m'<span><a href="inscription.html">inscris</a></span> !</p>
+        <p class="oublie">J'ai oublié mon <span><a href="#">mot de passe</a></span> !</p>
+    </form>
+</body>
+</html>
+<script>
+    document.querySelector("#login-form").addEventListener("submit", function(e) {
+        e.preventDefault();
+    
+        const formData = new FormData(this);
+    
+        fetch("../../app/Controllers/auth_controller.php?action=login", {
+            method: "POST",
+            headers: {
+                "X-Requested-With": "XMLHttpRequest"
+            },
+            body: formData
+        })
+        .then(async res => {
+            const raw = await res.text(); // 🔍 lire même en cas de 401
+            console.log("Réponse brute :", raw);
+    
+            try {
+                const data = JSON.parse(raw);
+    
+                if (data.status === "success") {
+                    localStorage.setItem("successMessage", `✅ Bonjour ${data.prenom} !`);
+                    const previousPage = localStorage.getItem("previousPage");
+    
+                    if (previousPage) {
+                        localStorage.removeItem("previousPage");
+                        window.top.location.href = previousPage;
+                    } else {
+                        window.top.location.href = "/index.html";
+                    }
+                } else {
+                    localStorage.setItem("accessDenied", `✖ ${data.message}`);
+                    const previousPage = localStorage.getItem("previousPage");
+    
+                    if (previousPage) {
+                        window.top.location.href = previousPage;
+                    } else {
+                        window.top.location.href = "/index.html";
+                    }
+                }
+    
+            } catch (e) {
+                console.error("❌ Erreur de parsing JSON :", e);
+                localStorage.setItem("accessDenied", `✖ Erreur serveur`);
+            }
+        })
+        .catch(err => {
+            console.error("Erreur lors de la connexion :", err);
+            localStorage.setItem("accessDenied", `✖ Erreur réseau`);
+        });
+    });
+    </script>
+    
+
+    

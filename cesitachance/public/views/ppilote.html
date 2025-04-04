@@ -1,0 +1,286 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user']) || $_SESSION['user']['Permission'] !== 'admin') {
+    // Si l'utilisateur n'est pas connecté OU n'est pas admin
+    // Sauvegarde la page actuelle dans le localStorage (JS devra la lire)
+    echo "<script>
+        const previous = localStorage.getItem('previousPage') || '/index.html';
+        localStorage.setItem('accessDenied', '⛔ Vous n\\'avez pas accès à cette page.');
+        window.location.href = previous;
+    </script>";
+    exit;
+}
+else {
+    echo "<script>
+    localStorage.setItem('successMessage', '✅ Accès à la page autorisé.');
+    </script>";
+}
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page pilote</title>
+
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/petudiant.css">
+    <link href="../css/en-tete.css" rel="stylesheet" type="text/css">
+    <link href="../css/footer.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <div id="arriere_plan"></div>
+
+    <!-- Notification - Accès Refusé -->
+    <div id="notification"></div>
+
+    <!-- ✅ Notification de succès -->
+    <div id="success-notification" class="notification success"></div>
+        
+        <!--En-tête commun à toute les pages-->
+        <header>
+            
+            <!--affichage principal de l'en-tête-->
+            <div class="flex_container" id="flex_container_1">
+                <nav>
+                    <a id="a_logo" href="../../index.html"><img id="logo" src="../assets/logo_2.png" alt="logo"></a>
+                </nav>
+
+                <div class="flex_container" id="flex_container_2">
+                    <nav>
+                        <a class="lien" href="page entreprise1.1.html"><b>Entreprise</b></a>
+                        <a class="lien" href="offre.html"><b>Offre</b></a>
+                        <a class="lien" href="about.html"><b>A propos de nous</b></a>
+                    </nav>
+                </div>
+                
+                <div class="flex_container" id="flex_container_3">
+                    <div class="tooltip" id="profil_1">
+                        <span class="tooltip_text_gauche" id="tooltip_profil">Vous êtes connecté</span>
+                    </div>
+
+                    <div id="modalConnexion" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <iframe src="connexion.html" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+                    <nav>
+                        <a id="connexion" href="connexion.html"><b>Connexion</b></a>
+                    </nav>
+
+                    <p class="tooltip" id="bouton_burger_1"><b>☰</b>
+                        <span class="tooltip_text_gauche" id="tooltip_burger">Liens de navigation</span>
+                    </p>
+                </div>
+            </div>
+
+            <!--affichage du nom/prenom et option de deconnexion apres appuie sur le profil (paysage)-->
+            <div class="flex_container" id="lien_profil_1">
+                <span>Connecter en tant que :</span>
+
+                <div id="nom_prenom_lien_profil_1">
+                    <span><b>Nom</b></span>
+                    <span><b>Prénom</b></span>
+                </div>
+
+                <div class="flex_container" id="flex_container_4">
+                    <nav>
+                        <a class="lien_deconnexion" href="#"><b>Déconnexion</b></a>
+                        <img id="porte_sortie_1" src="../assets/porte_sortie.png" alt="logo">
+                    </nav>
+                </div>
+            </div>
+
+            <!--affichage de liens secondaire apres appuie du bouton burger (paysage)-->
+            <div class="flex_container" id="lien_burger_2">
+                <nav>
+                    <a class="lien" href="stat.html"><b>Statistique</b></a>
+                    <a class="lien" href="wishlist.html"><b>Wish list</b></a>
+                    <a class="lien" href="petudiant.html" data-role="admin,pilote" ><b>Étudiant</b></a>
+                    <a class="lien" href="ppilote.html" data-role="admin" ><b>Pilote</b></a>
+                </nav>
+
+                <!--affichage de liens secondaire supplementaire apres appuie du bouton burger (paysage)-->
+                <div class="flex_container" id="lien_burger_3">
+                    <nav>
+                        <a class="lien" href="page entreprise1.1.html"><b>Entreprise</b></a>
+                        <a class="lien" href="offre.html"><b>Offre</b></a>
+                        <a class="lien" href="about.html"><b>A propos de nous</b></a>
+                    </nav>
+                </div>
+            </div>
+
+            <!--affichage du nom/prenom et option de deconnexion apres appuie sur le profil (portrait)-->
+            <div class="flex_container" id="lien_profil_2">
+                <span id="x_3">✖</span>
+                <span>Connecter en tant que :</span>
+
+                <div id="nom_prenom_lien_profil_2">
+                    <span><b>Nom</b></span>
+                    <span><b>Prénom</b></span>
+                </div>
+
+                <div class="flex_container" id="flex_container_5">
+                    <nav>
+                        <a class="lien_deconnexion"  href="#"><b>Déconnexion</b></a>
+                        <img id="porte_sortie_2" src="../assets/porte_sortie.png" alt="logo">
+                    </nav>
+                </div>
+            </div>
+
+            <!--affichage de liens secondaire apres appuie du bouton burger (portrait)-->
+            <div class="flex_container" id="lien_burger_1">
+                <span id="x_2">✖</span>
+
+                <nav>
+                    <a class="lien" href="stat.html"><b>Statistique</b></a>
+                    <a class="lien" href="wishlist.html"><b>Wish list</b></a>
+                    <a class="lien" href="petudiant.html" data-role="admin,pilote" ><b>Étudiant</b></a>
+                    <a class="lien" href="ppilote.html" data-role="admin" ><b>Pilote</b></a>
+                </nav>
+
+                <!--affichage de liens secondaire supplementaire apres appuie du bouton burger (portrait)-->
+                <div class="flex_container" id="lien_burger_3">
+                    <nav>
+                        <a class="lien" href="page entreprise1.1.html"><b>Entreprise</b></a>
+                        <a class="lien" href="offre.html"><b>Offre</b></a>
+                        <a class="lien" href="about.html"><b>A propos de nous</b></a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+
+        <section id="bas" class="search-bar">
+            <form id="search-form" method="GET">
+            <input type="text" id="search-nom" name="nom_etudiant" placeholder="Saisissez le nom du pilote">
+            <select id="search-promotion" name="promotion">
+                <option value="" disabled selected>Choisissez une promotion</option>
+                <option value="Tout">Tout</option>
+                <option value="CPI A1">CPI A1</option>
+                <option value="CPI A2">CPI A2</option>
+                <option value="CPI A3">CPI A3</option>
+                <option value="Cycle Ingénieur">Cycle Ingénieur</option>
+            </select>
+            <select id="search-mineure" name="mineure">
+                <option value="" disabled selected>Choisissez une mineure</option>
+                <option value="Tout">Tout</option>
+                <option value="BTP">BTP</option>
+                <option value="Informatique">Informatique</option>
+                <option value="Généraliste">Généraliste</option>
+                <option value="S3E">S3E</option>
+            </select>
+            <button type="submit">Rechercher</button>
+            <button type="button" id="reset-search">Réinitialiser</button>
+        </form>
+    </section>
+
+    <!-- Section de contenu -->
+    <section class="content">
+        <div class="left-panel">
+            <div class="list">
+                <h3>Pilotes</h3>
+                <ul id="student-list"></ul>
+            </div>
+        </div>
+
+        <div class="right-panel">
+           <!-- <div class="info-card">
+                <!-- <div class="photo-placeholder" id="upload-box">
+                    <input type="file" id="photo-upload" accept="image/*" style="display: none;">
+                    <label for="photo-upload" id="upload-label">+</label>
+                    <img id="preview-image" src="" alt="" style="display: none; width: 100%; height: 100%; object-fit: cover;">
+                </div> 
+
+                <div class="details">
+                    <p id="pilot-details">Sélectionnez un pilote pour voir ses détails</p>
+                </div>
+            </div>
+        -->
+
+            <form id="pilot-form" method="POST">
+                <label for="name">Nom Pilote :</label>
+                <input type="text" id="name" name="name" placeholder="Saisissez le nom" required>
+
+                <label for="firstName">Prénom :</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Saisissez le prénom" required>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" placeholder="Saisissez l'email" required>
+
+                <label for="password">Mot de passe :</label>
+                <input type="password" id="password" name="password" placeholder="Saisissez un mot de passe" required>
+
+                <label for="phone">Numéro de téléphone :</label>
+                <input type="tel" id="phone" name="phone" placeholder="Saisissez le numéro de téléphone" required>
+
+                <label for="promotion">Promotion :</label>
+                <select name="promotion" id="promotion" required>
+                    <option value="" selected disabled>Choisissez une promotion</option>
+                    <option value="CPI A1">CPI A1</option>
+                    <option value="CPI A2">CPI A2</option>
+                    <option value="CPI A3">CPI A3</option>
+                    <option value="Cycle Ingénieur">Cycle Ingénieur</option>
+                </select>
+
+                <label for="mineure">Mineure :</label>
+                <select name="mineure" id="mineure">
+                    <option value="" selected disabled>Choisissez une mineure</option>
+                    <option value="BTP">BTP</option>
+                    <option value="Informatique">Informatique</option>
+                    <option value="Généraliste">Généraliste</option>
+                    <option value="S3E">S3E</option>
+                </select>
+
+                <div class="buttons">
+                    <button type="reset" class="delete">Annuler</button>
+                    <button type="submit" class="add">Ajouter</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer">
+            <div class="footer-links">
+                <a href="../../index.html">Accueil</a>
+                <a href="offre.html"> Offres</a>
+                <a href="page entreprise1.1.html"> Entreprises </a>
+                <a href="about.html"> A propos</a>
+                <a href="contact.html">Nous contacter</a>
+                <a href="cgu.html">Mentions légales</a>
+                <a href="newsletter.html">Newsletter</a>
+            </div>
+            <ul id="footer-links-list" class="footer-links-list">
+                <li><a href="../../index.html">Accueil</a></li>
+                <li><a href="offre.html">Offres</a></li>
+                <li><a href="page entreprise1.1.html">Entreprises</a></li>
+                <li><a href="about.html">A propos</a></li>
+                <li><a href="contact.html">Nous contacter</a></li>
+                <li><a href="cgu.html">Mentions légales</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+            </ul>
+            <div class="social-media">
+                <a href="#"><img src="../assets/eth.png" alt="CESI Ta Chance Web 3"></a>
+                <a href="#"><img src="../assets/twitter.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/cesi_ta_chance/"><img src="../assets/instagram.png" alt="Instagram"></a>
+            </div>
+            <p class="copyright"> <span class="cr"> &copy </span> CESI Ta Chance - 2025 Tous droits réservés.</p>
+        </div>
+    </footer>   
+
+</body>
+</html>
+
+<script defer src="../js/ppilote.js"></script>
+<script src="../js/en-tete.js"></script>
+<script src="../js/footer.js"></script>
+
+
+

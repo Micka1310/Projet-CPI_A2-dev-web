@@ -1,0 +1,359 @@
+<!-- page d'offre pour le projet dev web à CESI -->
+
+<!doctype html>
+
+<html lang="fr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="mot_clé" content="HTML">
+        <meta name="description" content="page d'offre">
+        <meta name="auteur" content="King Mickaël">
+        <meta name="date_de_mise_a_jour" content="22/02/2025">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+        <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+        <link href="../css/en-tete.css" rel="stylesheet" type="text/css">
+        <link href="../css/entreprise.css" rel="stylesheet" type="text/css">
+        <link href="../css/footer.css" rel="stylesheet" type="text/css">
+
+        <title>CESI ta chance | offre</title>
+    </head>
+
+    <body>
+          <!--arriere plan de la page entière-->
+          <div id="arriere_plan"></div>
+
+          <!-- Notification - Accès Refusé -->
+          <div id="notification"></div>
+  
+          <!-- ✅ Notification de succès -->
+          <div id="success-notification" class="notification success"></div>
+      
+          <!--En-tête commun à toute les pages-->
+          <header>
+              
+              <!--affichage principal de l'en-tête-->
+              <div class="flex_container" id="flex_container_1">
+                  <nav>
+                      <a id="a_logo" href="../../index.html"><img id="logo" src="../assets/logo_2.png" alt="logo"></a>
+                  </nav>
+  
+                  <div class="flex_container" id="flex_container_2">
+                      <nav>
+                          <a class="lien" href="entreprise.html"><b>Entreprise</b></a>
+                          <a class="lien" href="offre.html"><b>Offre</b></a>
+                          <a class="lien" href="about.html"><b>A propos de nous</b></a>
+                      </nav>
+                  </div>
+                  
+                  <div class="flex_container" id="flex_container_3">
+                      <div class="tooltip" id="profil_1">
+                          <span class="tooltip_text_gauche" id="tooltip_profil">Vous êtes connecté</span>
+                      </div>
+  
+                      <div id="modalConnexion" class="modal">
+                          <div class="modal-content">
+                              <span class="close">&times;</span>
+                              <iframe src="connexion.html" frameborder="0"></iframe>
+                          </div>
+                      </div>
+  
+                      <nav>
+                          <a id="connexion" href="connexion.html"><b>Connexion</b></a>
+                      </nav>
+  
+                      <p class="tooltip" id="bouton_burger_1"><b>☰</b>
+                          <span class="tooltip_text_gauche" id="tooltip_burger">Liens de navigation</span>
+                      </p>
+                  </div>
+              </div>
+  
+              <!--affichage du nom/prenom et option de deconnexion apres appuie sur le profil (paysage)-->
+              <div class="flex_container" id="lien_profil_1">
+                  <span>Connecter en tant que :</span>
+  
+                  <div id="nom_prenom_lien_profil_1">
+                      <span><b>Nom</b></span>
+                      <span><b>Prénom</b></span>
+                  </div>
+  
+                  <div class="flex_container" id="flex_container_4">
+                      <nav>
+                          <a class="lien_deconnexion" href="#"><b>Déconnexion</b></a>
+                          <img id="porte_sortie_1" src="../assets/porte_sortie.png" alt="logo">
+                      </nav>
+                  </div>
+              </div>
+  
+              <!--affichage de liens secondaire apres appuie du bouton burger (paysage)-->
+              <div class="flex_container" id="lien_burger_2">
+                  <nav>
+                      <a class="lien" href="stat.html"><b>Statistique</b></a>
+                      <a class="lien" href="wishlist.html"><b>Wish list</b></a>
+                      <a class="lien" href="petudiant.html" data-role="admin,pilote" ><b>Étudiant</b></a>
+                      <a class="lien" href="ppilote.html" data-role="admin" ><b>Pilote</b></a>
+                  </nav>
+  
+                  <!--affichage de liens secondaire supplementaire apres appuie du bouton burger (paysage)-->
+                  <div class="flex_container" id="lien_burger_3">
+                      <nav>
+                          <a class="lien" href="page entreprise1.1.html"><b>Entreprise</b></a>
+                          <a class="lien" href="offre.html"><b>Offre</b></a>
+                          <a class="lien" href="about.html"><b>A propos de nous</b></a>
+                      </nav>
+                  </div>
+              </div>
+  
+              <!--affichage du nom/prenom et option de deconnexion apres appuie sur le profil (portrait)-->
+              <div class="flex_container" id="lien_profil_2">
+                  <span id="x_3">✖</span>
+                  <span>Connecter en tant que :</span>
+  
+                  <div id="nom_prenom_lien_profil_2">
+                      <span><b>Nom</b></span>
+                      <span><b>Prénom</b></span>
+                  </div>
+  
+                  <div class="flex_container" id="flex_container_5">
+                      <nav>
+                          <a class="lien_deconnexion"  href="#"><b>Déconnexion</b></a>
+                          <img id="porte_sortie_2" src="../assets/porte_sortie.png" alt="logo">
+                      </nav>
+                  </div>
+              </div>
+  
+              <!--affichage de liens secondaire apres appuie du bouton burger (portrait)-->
+              <div class="flex_container" id="lien_burger_1">
+                  <span id="x_2">✖</span>
+  
+                  <nav>
+                      <a class="lien" href="stat.html"><b>Statistique</b></a>
+                      <a class="lien" href="wishlist.html"><b>Wish list</b></a>
+                      <a class="lien" href="petudiant.html" data-role="admin,pilote" ><b>Étudiant</b></a>
+                      <a class="lien" href="ppilote.html" data-role="admin" ><b>Pilote</b></a>
+                  </nav>
+  
+                  <!--affichage de liens secondaire supplementaire apres appuie du bouton burger (portrait)-->
+                  <div class="flex_container" id="lien_burger_3">
+                      <nav>
+                          <a class="lien" href="page entreprise1.1.html"><b>Entreprise</b></a>
+                          <a class="lien" href="offre.html"><b>Offre</b></a>
+                          <a class="lien" href="about.html"><b>A propos de nous</b></a>
+                      </nav>
+                  </div>
+              </div>
+          </header>
+
+        <form action="#" method="get">
+
+            <!--barres de recherche (nom_poste et lieu) pour les offres-->
+            <section id="section_recherche">
+
+                <!--(paysage)-->
+                <div class="flex_container" id="flex_container_recherche_1">
+                    <div class="flex_container" id="flex_container_recherche_2">
+                        <img id="ampoule_eteinte_1" src="../assets/ampoule_eteinte.png" alt="ampoule_eteinte">
+                        <img id="ampoule_allumer_1" src="../assets/ampoule_allumer.png" alt="ampoule_allumer">
+                        <input id="barre_recherche_offre_1" type="search" placeholder="nom_poste, mot-clé...">
+                        <span id="separateur_recherche_1">|</span>
+                        <img id="localisation_eteinte_1" src="../assets/localisation.png" alt="localisation">
+                        <img id="localisation_allumer_1" src="../assets/localisation.png" alt="localisation">
+                        <input id="barre_recherche_lieu_1" type="search" placeholder="lieu">
+
+                        <button class="tooltip" id="bouton_recherche_1" type="submit">
+                            <img id="loupe_recherche_1" src="../assets/loupe.png" alt="loupe">
+                            <img id="loupe_recherche_3" src="../assets/loupe.png" alt="loupe">
+                            <span class="tooltip_text_gauche" id="tooltip_loupe">bouton recherche</span>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!--(portrait)-->
+                <div class="flex_container" id="flex_container_recherche_8">
+                    <div class="flex_container" id="flex_container_recherche_6">
+                        <div class="flex_container" id="flex_container_recherche_3">
+                            <img id="ampoule_eteinte_2" src="../assets/ampoule_eteinte.png" alt="ampoule_eteinte">
+                            <img id="ampoule_allumer_2" src="../assets/ampoule_allumer.png" alt="ampoule_allumer">
+                            <input id="barre_recherche_offre_2" type="search" placeholder="nom_poste, mot-clé...">
+                        </div>
+
+                        <div class="flex_container" id="flex_container_recherche_7">
+                            <div id="bouton_mode_recherche_1">recherche</div>
+                            <img id="loupe_recherche_2" src="../assets/loupe.png" alt="loupe">
+                        </div>
+                    </div>
+
+                    <div class="flex_container" id="flex_container_recherche_4">
+                        <img id="localisation_eteinte_2" src="../assets/localisation.png" alt="localisation">
+                        <img id="localisation_allumer_2" src="../assets/localisation.png" alt="localisation">
+                        <input id="barre_recherche_lieu_2" type="search" placeholder="lieu">
+                    </div>
+
+                    <div class="flex_container" id="flex_container_recherche_5">
+                        <button id="bouton_recherche_2" type="submit"><b>Rechercher</b></button>
+                    </div>
+
+                    <div id="bouton_mode_recherche_2">>></div>
+                </div>
+            </section>
+
+
+            <!--barres secondaire-->
+            <section id="barre_secondaire">
+                <div id="switch_1"></div>
+            </section>
+
+
+            
+        </form>
+
+        <br>
+        <br>
+        <br>
+        
+    
+        
+         <!-- Filtres -->
+    <div class="filters-container">
+        <select id="filtreSpecialite">
+            <option value="">Spécialité</option>
+            <option value="BTP">BTP</option>
+            <option value="Informatique">Informatique</option>
+            <option value="S3E">S3E</option>
+            <option value="Généraliste">Généraliste</option>
+        </select>
+        <select id="filtreLieu">
+            <option value="">Lieu</option>
+            <option value="Auvergne-Rhone-Alpes">Auvergne-Rhone-Alpes</option>
+            <option value="Bourgogne-France-Comté">Bourgogne-France-Comté</option>
+            <option value="Bretagne">Bretagne</option>
+            <option value="Centre-Val de Loire">Centre-Val de Loire</option>
+            <option value="Corse">Corse</option>
+            <option value="Grand Est">Grand Est</option>
+            <option value="Hauts-de-France">Hauts-de-France</option>
+            <option value="Ile-de-France">Ile-de-France</option>
+            <option value="Normandie">Normandie</option>
+            <option value="Nouvelle-Aquitaine">Nouvelle-Aquitaine</option>
+            <option value="Occitanie">Occitanie</option>
+            <option value="Pays de la Loire">Pays de la Loire</option>
+            <option value="Provence Alpes Cote d'Azur">Provence Alpes Cote d'Azur</option>
+        </select>
+        <select id="filtreDate">
+            <option value="">Date de publication</option>
+            <option value="Aucun">Pas de limite de temps</option>
+            <option value="7">La semaine dernière</option>
+            <option value="30">Le mois dernier</option>
+            <option value="1">Dernières 24 heures</option>
+        </select>
+        <select id="filtreType">
+            <option value="">Type d’entreprise</option>
+            <option value="privé">Entreprise privé</option>
+            <option value="public">Entreprise public</option>
+            <option value="mixte">Entreprise mixte</option>
+            <option value="solidaire">Entreprise social et solidaire</option>
+        </select>
+    
+        <select id="filtreStagesPostules">
+            <option value="">Stagiaires ayant deja postuler</option>
+            <option value="0-10">0-10</option>
+            <option value="0-20">0-20</option>
+            <option value="0-30">0-30</option>
+            <option value="0-40">0-40</option>
+            <option value="0-50">0-50</option>
+            <option value="10-20">10-20</option>
+            <option value="10-30">10-30</option>
+            <option value="10-40">10-40</option>
+            <option value="10-50">10-50</option>
+        </select>
+    </div>
+
+    
+
+    <!-- Contenu principal -->
+    <main>
+        <aside class="company-list">
+
+            <div id="offresContainer" class="offres-scrollable"></div>
+            <div class="pagination">
+                <button id="prevBtn">←</button>
+                <span id="pageNumber">1</span>
+                <button id="nextBtn">→</button>
+              </div>
+        </aside>
+        
+
+        
+
+
+
+        <section class="company-details" style="display: none;">
+            <h2 id="nomEntreprise"></h2><br>
+            <p><strong>Ville :</strong> <span id="villeEntreprise"></span></p><br>
+            <p><strong>Spécialité :</strong> <span id="specialiteEntreprise"></span></p><br>
+            <p><strong>Numéro de téléphone :</strong> <span id="telephoneEntreprise"></span></p><br>
+            <p><strong>Site :</strong> <a href="#" id="siteEntreprise" target="_blank"></a></p><br>
+            <div id="descriptionEntreprise" class="description-entreprise"></div><br>
+          
+            <!-- Évaluation étoiles -->
+            <h3>Évaluez cette entreprise :</h3>
+            <div id="starsContainer">
+              ★★★★★
+            </div>
+            <br>
+          
+            <!-- Boutons modifier et supprimer -->
+            <div id="groupe_bouton_offre">
+              <button class="tooltip" id="bouton_modifier" type="button">
+                <img id="image_modifier" src="../assets/modifier.png" alt="image_modifier">
+                <span class="tooltip_text_bas">Modifier l'offre</span>
+              </button>
+          
+              <button class="tooltip" id="bouton_poubelle" type="button">
+                <img id="image_poubelle" src="../assets/poubelle.png" alt="image_poubelle">
+                <span class="tooltip_text_bas">Supprimer l'offre</span>
+              </button>
+            </div>
+          </section>
+          
+    </main>
+
+        <!--Bas de page commun à toute les pages-->
+        <footer>
+            <div class="footer">
+                <div class="footer-links">
+                    <a href="../../index.html">Accueil</a>
+                    <a href="offre.html"> Offres</a>
+                    <a href="entreprise.html"> Entreprises </a>
+                    <a href="about.html"> A propos</a>
+                    <a href="contact.html">Nous contacter</a>
+                    <a href="cgu.html">Mentions légales</a>
+                    <a href="newsletter.html">Newsletter</a>
+                </div>
+                <ul id="footer-links-list" class="footer-links-list">
+                    <li><a href="../../index.html">Accueil</a></li>
+                    <li><a href="offre.html">Offres</a></li>
+                    <li><a href="page entreprise1.1.html">Entreprises</a></li>
+                    <li><a href="about.html">A propos</a></li>
+                    <li><a href="contact.html">Nous contacter</a></li>
+                    <li><a href="cgu.html">Mentions légales</a></li>
+                    <li><a href="newsletter.html">Newsletter</a></li>
+                </ul>
+                <div class="social-media">
+                    <a href="#"><img src="../assets/eth.png" alt="CESI Ta Chance Web 3"></a>
+                    <a href="#"><img src="../assets/twitter.png" alt="Twitter"></a>
+                    <a href="https://www.instagram.com/cesi_ta_chance/"><img src="../assets/instagram.png" alt="Instagram"></a>
+                </div>
+                <p class="copyright"> <span class="cr"> &copy </span> CESI Ta Chance - 2025 Tous droits réservés.</p>
+            </div>
+        </footer>
+    </body>
+    </body>
+</html>
+
+<script src="../js/en-tete.js"></script>
+<script src="../js/entreprise.js"></script>
+<script src="../js/page_entreprise.js"></script>
+<script src="../js/footer.js"></script>

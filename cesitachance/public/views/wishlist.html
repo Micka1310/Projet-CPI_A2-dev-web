@@ -1,0 +1,383 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user']) || !in_array($_SESSION['user']['Permission'], ['admin', 'etudiant'])) {
+    echo "<script>
+        const previous = localStorage.getItem('previousPage') || '/index.html';
+        localStorage.setItem('accessDenied', '⛔ Vous n\\'avez pas accès à cette page.');
+        window.location.href = previous;
+    </script>";
+    exit;
+}
+else {
+    echo "<script>
+    localStorage.setItem('successMessage', '✅ Accès à la page autorisé.');
+    </script>";
+}
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist - Offres de stage</title>
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/wishlist.css">
+    <link href="../css/en-tete.css" rel="stylesheet" type="text/css">
+    <link href="../css/footer.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="arriere_plan"></div>
+
+    <!-- Notification - Accès Refusé -->
+    <div id="notification"></div>
+
+    <!-- ✅ Notification de succès -->
+    <div id="success-notification" class="notification success"></div>
+
+        <!--En-tête commun à toute les pages-->
+        <header>
+            
+            <!--affichage principal de l'en-tête-->
+            <div class="flex_container" id="flex_container_1">
+                <nav>
+                    <a id="a_logo" href="../../index.html"><img id="logo" src="../assets/logo_2.png" alt="logo"></a>
+                </nav>
+
+                <div class="flex_container" id="flex_container_2">
+                    <nav>
+                        <a class="lien" href="entreprise.html"><b>Entreprise</b></a>
+                        <a class="lien" href="offre.html"><b>Offre</b></a>
+                        <a class="lien" href="about.html"><b>A propos de nous</b></a>
+                    </nav>
+                </div>
+                
+                <div class="flex_container" id="flex_container_3">
+                    <div class="tooltip" id="profil_1">
+                        <span class="tooltip_text_gauche" id="tooltip_profil">Vous êtes connecté</span>
+                    </div>
+
+                    <div id="modalConnexion" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <iframe src="connexion.html" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                    
+                    <nav>
+                        <a id="connexion" href="connexion.html"><b>Connexion</b></a>
+                    </nav>
+
+                    <p class="tooltip" id="bouton_burger_1"><b>☰</b>
+                        <span class="tooltip_text_gauche" id="tooltip_burger">Liens de navigation</span>
+                    </p>
+                </div>
+            </div>
+
+            <!--affichage du nom/prenom et option de deconnexion apres appuie sur le profil (paysage)-->
+            <div class="flex_container" id="lien_profil_1">
+                <span>Connecter en tant que :</span>
+
+                <div id="nom_prenom_lien_profil_1">
+                    <span><b>Nom</b></span>
+                    <span><b>Prénom</b></span>
+                </div>
+
+                <div class="flex_container" id="flex_container_4">
+                    <nav>
+                        <a class="lien_deconnexion" href="#"><b>Déconnexion</b></a>
+                        <img id="porte_sortie_1" src="../assets/porte_sortie.png" alt="logo">
+                    </nav>
+                </div>
+            </div>
+
+            <!--affichage de liens secondaire apres appuie du bouton burger (paysage)-->
+            <div class="flex_container" id="lien_burger_2">
+                <nav>
+                    <a class="lien" href="stat.html"><b>Statistique</b></a>
+                    <a class="lien" href="wishlist.html"><b>Wish list</b></a>
+                    <a class="lien" href="petudiant.html" data-role="admin,pilote" ><b>Étudiant</b></a>
+                    <a class="lien" href="ppilote.html" data-role="admin" ><b>Pilote</b></a>
+                </nav>
+
+                <!--affichage de liens secondaire supplementaire apres appuie du bouton burger (paysage)-->
+                <div class="flex_container" id="lien_burger_3">
+                    <nav>
+                        <a class="lien" href="entreprise.html"><b>Entreprise</b></a>
+                        <a class="lien" href="offre.html"><b>Offre</b></a>
+                        <a class="lien" href="about.html"><b>A propos de nous</b></a>
+                    </nav>
+                </div>
+            </div>
+
+            <!--affichage du nom/prenom et option de deconnexion apres appuie sur le profil (portrait)-->
+            <div class="flex_container" id="lien_profil_2">
+                <span id="x_3">✖</span>
+                <span>Connecter en tant que :</span>
+
+                <div id="nom_prenom_lien_profil_2">
+                    <span><b>Nom</b></span>
+                    <span><b>Prénom</b></span>
+                </div>
+
+                <div class="flex_container" id="flex_container_5">
+                    <nav>
+                        <a class="lien_deconnexion"  href="#"><b>Déconnexion</b></a>
+                        <img id="porte_sortie_2" src="../assets/porte_sortie.png" alt="logo">
+                    </nav>
+                </div>
+            </div>
+
+            <!--affichage de liens secondaire apres appuie du bouton burger (portrait)-->
+            <div class="flex_container" id="lien_burger_1">
+                <span id="x_2">✖</span>
+
+                <nav>
+                    <a class="lien" href="stat.html"><b>Statistique</b></a>
+                    <a class="lien" href="wishlist.html"><b>Wish list</b></a>
+                    <a class="lien" href="petudiant.html" data-role="admin,pilote" ><b>Étudiant</b></a>
+                    <a class="lien" href="ppilote.html" data-role="admin" ><b>Pilote</b></a>
+                </nav>
+
+                <!--affichage de liens secondaire supplementaire apres appuie du bouton burger (portrait)-->
+                <div class="flex_container" id="lien_burger_3">
+                    <nav>
+                        <a class="lien" href="entreprise.html"><b>Entreprise</b></a>
+                        <a class="lien" href="offre.html"><b>Offre</b></a>
+                        <a class="lien" href="about.html"><b>A propos de nous</b></a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <form action="#" method="get">
+
+            <!--barres de recherche (nom_poste et lieu) pour les offres-->
+            <section id="section_recherche">
+
+                <!--(paysage)-->
+                <div class="flex_container" id="flex_container_recherche_1">
+                    <div class="flex_container" id="flex_container_recherche_2">
+                        <img id="ampoule_eteinte_1" src="/public/assets/ampoule_eteinte.png" alt="ampoule_eteinte">
+                        <img id="ampoule_allumer_1" src="/public/assets/ampoule_allumer.png" alt="ampoule_allumer">
+                        <input id="barre_recherche_offre_1" type="search" placeholder="Nom du stage">
+                        <span id="separateur_recherche_1">|</span>
+                        <img id="localisation_eteinte_1" src="/public/assets/localisation.png" alt="localisation">
+                        <img id="localisation_allumer_1" src="/public/assets/localisation.png" alt="localisation">
+                        <input id="barre_recherche_lieu_1" type="search" placeholder="Entreprise">
+                        <span id="separateur_recherche_2">|</span>
+                        <img id="reference_eteinte_1" src="/public/assets/ref.jpg" alt="reference">
+                        <img id="reference_allumer_1" src="/public/assets/ref.jpg" alt="reference">
+                        <input id="barre_recherche_reference_1" type="search" placeholder="Référence">
+
+                        <button class="tooltip" id="bouton_recherche_1" type="submit">
+                            <img id="loupe_recherche_1" src="/public/assets/loupe.png" alt="loupe">
+                            <img id="loupe_recherche_3" src="/public/assets/loupe.png" alt="loupe">
+                            <span class="tooltip_text_gauche" id="tooltip_loupe">bouton recherche</span>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!--(portrait)-->
+                <div class="flex_container" id="flex_container_recherche_8">
+                    <div class="flex_container" id="flex_container_recherche_6">
+                        <div class="flex_container" id="flex_container_recherche_3">
+                            <img id="ampoule_eteinte_2" src="/public/assets/ampoule_eteinte.png" alt="ampoule_eteinte">
+                            <img id="ampoule_allumer_2" src="/public/assets/ampoule_allumer.png" alt="ampoule_allumer">
+                            <input id="barre_recherche_offre_2" type="search" placeholder="nom_poste, mot-clé...">
+                        </div>
+
+                        <div class="flex_container" id="flex_container_recherche_7">
+                            <div id="bouton_mode_recherche_1">recherche</div>
+                            <img id="loupe_recherche_2" src="/public/assets/loupe.png" alt="loupe">
+                        </div>
+                    </div>
+
+                    <div class="flex_container" id="flex_container_recherche_4">
+                        <img id="localisation_eteinte_2" src="/public/assets/localisation.png" alt="localisation">
+                        <img id="localisation_allumer_2" src="/public/assets/localisation.png" alt="localisation">
+                        <input id="barre_recherche_lieu_2" type="search" placeholder="lieu">
+                    </div>
+
+                    <div class="flex_container" id="flex_container_recherche_5">
+                        <button id="bouton_recherche_2" type="submit"><b>Rechercher</b></button>
+                    </div>
+
+                    <div class="flex_container" id="flex_container_recherche_6">
+                        <img id="reference_eteinte_2" src="/public/assets/ref.jpg" alt="reference">
+                        <img id="reference_allumer_2" src="/public/assets/ref.jpg" alt="reference">
+                        <input id="barre_recherche_reference_2" type="search" placeholder="référence">
+                    </div>
+
+                    <div id="bouton_mode_recherche_2">>></div>
+                </div>
+            </section>
+
+
+            <!--barres secondaire-->
+            <section id="barre_secondaire">
+                <div id="switch_1"></div>
+            </section>
+
+
+            <!--barres de filtre pour les offres-->
+            <section id="section_filtre">
+                <div class="flex_container" id="flex_container_filtre_1">
+                    <div class="flex_container">
+                        <b id="b_specialite">Specialité :</b>
+
+                        <select id="filtre_specialite">
+                            <option>Tout</option>
+                            <option>Généraliste</option>
+                            <option>BTP</option>
+                            <option>Informatique</option>
+                            <option>Système éléctronique embarqué</option>
+                        </select>
+                    </div>
+
+                    <div class="flex_container">
+                        <b id="b_teletravail">Télétravail :</b>
+
+                        <select id="filtre_teletravail">
+                            <option>Tout</option>
+                            <option>Oui</option>
+                            <option>Non</option>
+                        </select>
+                    </div>
+
+                    <div class="flex_container">
+                        <b id="b_duree">Durée :</b>
+
+                        <select id="filtre_duree">
+                            <option>Tout</option>
+                            <option>2 mois ou moins</option>
+                            <option>3 mois</option>
+                            <option>4 mois</option>
+                            <option>5 mois</option>
+                            <option>6 mois et plus</option>
+                        </select>
+                    </div>
+
+                    <div class="flex_container">
+                        <b id="b_contrat">Contrat :</b>
+
+                        <select id="filtre_contrat">
+                            <option>Tout</option>
+                            <option>Stage</option>
+                            <option>Alternance</option>
+                        </select>
+                    </div>
+
+                    <div class="flex_container">
+                        <b id="b_niveau_etude">Niveau d'étude :</b>
+
+                        <select id="filtre_niveau_etude">
+                            <option>Tout</option>
+                            <option>Aucun</option>
+                            <option>Bac +2</option>
+                            <option>Bac +3</option>
+                            <option>Bac +4</option>
+                            <option>Bac +5</option>
+                            <option>Bac +6</option>
+                        </select>
+                    </div>
+
+                    <div class="flex_container">
+                        <b id="b_salaire">Salaire :</b>
+
+                        <select id="filtre_salaire">
+                            <option>Tout</option>
+                            <option>+80€</option>
+                            <option>+1200€</option>
+                            <option>+1600€</option>
+                            <option>+2000€</option>
+                        </select>
+                    </div>
+
+                    <div class="flex_container" id="filtre_langue">
+                        <b id="b_langue">Langue :</b>
+
+                        <select id="filtre_langue">
+                            <option>Tout</option>
+                            <option>Français</option>
+                            <option>Anglais</option>
+                            <option>Espagnol</option>
+                            <option>Allemand</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+        </form>
+
+        <br>
+        <br>
+
+    
+    
+    <!-- Navigation secondaire -->
+    <nav class="secondary-nav">
+        <button class="active">Emplois enregistrés</button>
+        <button>Candidatures envoyées</button>
+        <button>Archivées</button>
+        <button class="stats">Statistique stage</button>
+    </nav>
+    
+    <!-- Liste des stages enregistrés -->
+    <section class="wishlist">
+        <div class="stage">
+            <h3>Le stage en question</h3>
+            <br>
+            <p>• Date</p>
+            <br>
+            <p>• Favoris</p>
+            <br>
+            <p>• Réponse : Oui ou Non</p>
+            <br>
+            
+
+            <button class="delete">Supprimer</button>
+        </div>
+        
+        <div class="stage">Stage...</div>
+        <div class="stage">Stage...</div>
+        <div class="stage">Stage...</div>
+        <div class="stage">Stage...</div>
+    </section>
+    
+    <!-- Pied de page -->
+    <footer>
+        <div class="footer">
+            <div class="footer-links">
+                <a href="../../index.html">Accueil</a>
+                <a href="offre.html"> Offres</a>
+                <a href="entreprise.html"> Entreprises </a>
+                <a href="about.html"> A propos</a>
+                <a href="contact.html">Nous contacter</a>
+                <a href="cgu.html">Mentions légales</a>
+                <a href="newsletter.html">Newsletter</a>
+            </div>
+            <ul id="footer-links-list" class="footer-links-list">
+                <li><a href="../../index.html">Accueil</a></li>
+                <li><a href="offre.html">Offres</a></li>
+                <li><a href="entreprise.html">Entreprises</a></li>
+                <li><a href="about.html">A propos</a></li>
+                <li><a href="contact.html">Nous contacter</a></li>
+                <li><a href="cgu.html">Mentions légales</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+            </ul>
+            <div class="social-media">
+                <a href="#"><img src="../assets/eth.png" alt="CESI Ta Chance Web 3"></a>
+                <a href="#"><img src="../assets/twitter.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/cesi_ta_chance/"><img src="../assets/instagram.png" alt="Instagram"></a>
+            </div>
+            <p class="copyright"> <span class="cr"> &copy </span> CESI Ta Chance - 2025 Tous droits réservés.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
+<script src="../js/en-tete.js"></script>
+<script src="../js/wishlist.js"></script>
+<script src="../js/footer.js"></script>

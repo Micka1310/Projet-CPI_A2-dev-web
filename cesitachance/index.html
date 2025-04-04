@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/public/assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <title>CESI Ta Chance</title>
+</head>
+
+
+<body>
+
+    <!-- Notification - Accès Refusé -->
+    <div id="notification"></div>
+
+    <!-- ✅ Notification de succès -->
+    <div id="success-notification" class="notification success"></div>
+
+    <header>
+        <!--affichage principal de l'en-tête-->
+        <div class="flex_container" id="flex_container_1">
+            <nav>
+                <a id="a_logo" href="index.html"><img id="logo" src="public/assets/logo_clair.png" alt="logo"></a>
+            </nav>
+
+            <div class="flex_container" id="flex_container_2">
+                <nav>
+                    <a class="lien" href="public/views/page entreprise1.1.html"><b>Entreprises</b></a>
+                    <a class="lien" href="public/views/offre.html"><b>Offres</b></a>
+                    <a class="lien" href="public/views/about.html"><b>A propos de nous</b></a>
+                </nav>
+            </div>
+            
+            <div class="flex_container" id="flex_container_3">
+                <div class="tooltip" id="profil_1">
+                    <span class="tooltip_text_gauche" id="tooltip_profil">Vous êtes connecté</span>
+                </div>
+                
+                
+                <div id="modalConnexion" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <iframe src="public/views/connexion.html" frameborder="0"></iframe>
+                    </div>
+                </div>
+
+                <nav>
+                    <a id="connexion" href="public/views/connexion.html"><b>Connexion</b></a>
+
+                </nav>
+
+                <p class="tooltip" id="bouton_burger_1"><b>☰</b>
+                    <span class="tooltip_text_gauche" id="tooltip_burger">Liens de navigation</span>
+                </p>
+            </div>
+        </div>
+
+        <!--affichage du nom/prenom et option de deconnexion apres appuie sur le profil (paysage)-->
+        <div class="flex_container" id="lien_profil_1">
+            <span>Connecter en tant que :</span>
+
+            <div id="nom_prenom_lien_profil_1">
+                <span><b>Nom</b></span>
+                <span><b>Prénom</b></span>
+            </div>
+
+            <div class="flex_container" id="flex_container_4">
+                <nav>
+                    <a class="lien_deconnexion" href="#"><b>Déconnexion</b></a>
+                    <img class="lien_deconnexion" id="porte_sortie_1" src="public/assets/porte_sortie.png" alt="logo">
+                </nav>
+            </div>
+        </div>
+
+        <!--affichage de liens secondaire apres appuie du bouton burger (paysage)-->
+        <div class="flex_container" id="lien_burger_2">
+            <nav>
+                <a class="lien" href="public/views/stat.html"><b>Statistique</b></a>
+                <a class="lien" href="public/views/wishlist.html"><b>Wish list</b></a>
+                <a class="lien" href="public/views/petudiant.html" data-role="admin,pilote"><b>Étudiant</b></a>
+                <a class="lien" href="public/views/ppilote.html" data-role="admin"> <b>Pilote</b></a>
+            </nav>
+
+            <!--affichage de liens secondaire supplementaire apres appuie du bouton burger (paysage)-->
+            <div class="flex_container" id="lien_burger_3">
+                <nav>
+                    <a class="lien" href="public/views/page entreprise1.1.html"><b>Entreprise</b></a>
+                    <a class="lien" href="public/views/offre.html"><b>Offre</b></a>
+                    <a class="lien" href="public/views/about.html"><b>A propos de nous</b></a>
+                </nav>
+            </div>
+        </div>
+
+        <!--affichage du nom/prenom et option de deconnexion apres appuie sur le profil (portrait)-->
+        <div class="flex_container" id="lien_profil_2">
+            <span id="x_3">✖</span>
+            <span>Connecter en tant que :</span>
+
+            <div id="nom_prenom_lien_profil_2">
+                <span><b>Nom</b></span>
+                <span><b>Prénom</b></span>
+            </div>
+
+            <div class="flex_container" id="flex_container_5">
+                <nav>
+                    <a class="lien_deconnexion" href="#"><b>Déconnexion</b></a>
+                    <img class="lien_deconnexion" id="porte_sortie_2" src="public/assets/porte_sortie.png" alt="logo">
+                </nav>
+            </div>
+        </div>
+
+        <!--affichage de liens secondaire apres appuie du bouton burger (portrait)-->
+        <div class="flex_container" id="lien_burger_1">
+            <span id="x_2">✖</span>
+
+            <nav>
+                <a class="lien" href="public/views/stat.html"><b>Statistique</b></a>
+                <a class="lien" href="public/iews/wishlist.html"><b>Wish list</b></a>
+                <a class="lien" href="public/views/petudiant.html" data-role="admin,pilote" ><b>Étudiant</b></a>
+                <a class="lien" href="public/views/ppilote.html" data-role="admin" ><b>Pilote</b></a>
+            </nav>
+
+            <!--affichage de liens secondaire supplementaire apres appuie du bouton burger (portrait)-->
+            <div class="flex_container" id="lien_burger_3">
+                <nav>
+                    <a class="lien" href="public/views/page entreprise1.1.html"><b>Entreprise</b></a>
+                    <a class="lien" href="public/views/offre.html"><b>Offre</b></a>
+                    <a class="lien" href="public/views/about.html"><b>A propos de nous</b></a>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+
+    <div class = "body">
+
+        <!-- FONCTIONNALITE A VENIR ---- SEARCH BAR CENTRALE 
+        <div class="search-bar">
+            <input type="text" placeholder="Une Entreprise ? Un Stage ?">
+            <button>🔍</button>
+        </div>
+        -->
+
+        <div class="hero-text">
+            <h1>Le Site qui fait Gagner du Temps pour Décrocher un Stage</h1>
+            <p>Besoin d’un stage ? En 3 clics, c’est réglé. Avec CESI Ta Chance, on t’aide à sécuriser ton avenir sans te faire perdre ton temps</p>
+            <a href="public/views/connexion.html"> <img src="public/assets/boutton-clic.png" alt="Clic conversion"> </a>
+        </div>
+
+    </div>
+
+
+    <div id="modalConnexion" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe src="public/views/connexion.html" frameborder="0"></iframe>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer">
+            <div class="footer-links">
+                <a href="index.html">Accueil</a>
+                <a href="public/views/offre.html"> Offres</a>
+                <a href="public/views/page entreprise1.1.html"> Entreprises </a>
+                <a href="public/views/about.html"> A propos</a>
+                <a href="public/views/contact.html">Nous contacter</a>
+                <a href="public/views/cgu.html">Mentions légales</a>
+                <a href="public/views/newsletter.html">Newsletter</a>
+            </div>
+            <ul id="footer-links-list" class="footer-links-list">
+                <li><a href="public/views/accueil.html">Accueil</a></li>
+                <li><a href="public/views/offre.html">Offres</a></li>
+                <li><a href="public/views/page entreprise1.1.html">Entreprises</a></li>
+                <li><a href="public/views/about.html">A propos</a></li>
+                <li><a href="public/views/contact.html">Nous contacter</a></li>
+                <li><a href="public/views/cgu.html">Mentions légales</a></li>
+                <li><a href="public/views/newsletter.html">Newsletter</a></li>
+            </ul>
+            <div class="social-media">
+                <a href="#"><img src="public/assets/eth.png" alt="CESI Ta Chance Web 3"></a>
+                <a href="#"><img src="public/assets/twitter.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/cesi_ta_chance/"><img src="public/assets/instagram.png" alt="Instagram"></a>
+            </div>
+            <p class="copyright"> <span class="cr"> &copy </span> CESI Ta Chance - 2025 Tous droits réservés.</p>
+        </div>
+    </footer>
+    
+
+</body>
+
+</html>
+
+<script src="public/js/accueil.js"></script>
