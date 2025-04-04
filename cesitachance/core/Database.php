@@ -5,6 +5,7 @@ class Database {
     private $conn;
 
     private $host = "cesitachance.local";
+    //private $host = "localhost";
     private $db_name = "cesitachance_db";
     private $username = "root";
     private $password = "";
