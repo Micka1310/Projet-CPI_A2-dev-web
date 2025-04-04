@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription à la Newsletter</title>
+    <link rel="stylesheet" href="newsletter.css">
+</head>
+<body>
+    <div class="newsletter-container">
+        <h1>Restez informé !</h1>
+        <p>Recevez les actualités directement dans votre boîte mail.</p>
+        <form action="/core/newsletter.php" method="POST">
+            <input type="email" name="email" placeholder="Votre adresse e-mail" required>
+            <button type="submit">S'inscrire</button>
+        </form>
+        <div id="message">
+            <?php
+            if (isset($_GET['success'])) {
+                echo "<p class='success'>Merci pour votre inscription !</p>";
+            } elseif (isset($_GET['error'])) {
+                echo "<p class='error'>Erreur : adresse e-mail invalide ou déjà enregistrée.</p>";
+            }
+            ?>
+        </div>
+    </div>
+    
+</body>
+
+
+</html>

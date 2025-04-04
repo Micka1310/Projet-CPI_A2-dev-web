@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CESI ta Chance - Statistiques </title>
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+
+    <link href="../css/en-tete.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../css/stat.css">
+    <link href="../css/footer.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <!--arriere plan de la page entière-->
+    <div id="arriere_plan"></div>
+
+    <!-- Notification - Accès Refusé -->
+    <div id="notification"></div>
+
+    <!-- ✅ Notification de succès -->
+    <div id="success-notification" class="notification success"></div>
+
+
+        <!--En-tête commun à toute les pages-->
+        <header>
+            
+            <!--affichage principal de l'en-tête-->
+            <div class="flex_container" id="flex_container_1">
+                <nav>
+                    <a id="a_logo" href="../../index.html"><img id="logo" src="../assets/logo_2.png" alt="logo"></a>
+                </nav>
+
+                <div class="flex_container" id="flex_container_2">
+                    <nav>
+                        <a class="lien" href="page entreprise1.1.html"><b>Entreprise</b></a>
+                        <a class="lien" href="offre.html"><b>Offre</b></a>
+                        <a class="lien" href="about.html"><b>A propos de nous</b></a>
+                    </nav>
+                </div>
+                
+                <div class="flex_container" id="flex_container_3">
+                    <div class="tooltip" id="profil_1">
+                        <span class="tooltip_text_gauche" id="tooltip_profil">Vous êtes connecté</span>
+                    </div>
+
+                    <div id="modalConnexion" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <iframe src="connexion.html" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+                    <nav>
+                        <a id="connexion" href="connexion.html"><b>Connexion</b></a>
+                    </nav>
+
+                    <p class="tooltip" id="bouton_burger_1"><b>☰</b>
+                        <span class="tooltip_text_gauche" id="tooltip_burger">Liens de navigation</span>
+                    </p>
+                </div>
+            </div>
+
+            <!--affichage du nom/prenom et option de deconnexion apres appuie sur le profil (paysage)-->
+            <div class="flex_container" id="lien_profil_1">
+                <span>Connecter en tant que :</span>
+
+                <div id="nom_prenom_lien_profil_1">
+                    <span><b>Nom</b></span>
+                    <span><b>Prénom</b></span>
+                </div>
+
+                <div class="flex_container" id="flex_container_4">
+                    <nav>
+                        <a class="lien_deconnexion" href="#"><b>Déconnexion</b></a>
+                        <img id="porte_sortie_1" src="../assets/porte_sortie.png" alt="logo">
+                    </nav>
+                </div>
+            </div>
+
+            <!--affichage de liens secondaire apres appuie du bouton burger (paysage)-->
+            <div class="flex_container" id="lien_burger_2">
+                <nav>
+                    <a class="lien" href="stat.html"><b>Statistique</b></a>
+                    <a class="lien" href="wishlist.html"><b>Wish list</b></a>
+                    <a class="lien" href="petudiant.html" data-role="admin,pilote" ><b>Étudiant</b></a>
+                    <a class="lien" href="ppilote.html" data-role="admin" ><b>Pilote</b></a>
+                </nav>
+
+                <!--affichage de liens secondaire supplementaire apres appuie du bouton burger (paysage)-->
+                <div class="flex_container" id="lien_burger_3">
+                    <nav>
+                        <a class="lien" href="page entreprise1.1.html"><b>Entreprise</b></a>
+                        <a class="lien" href="offre.html"><b>Offre</b></a>
+                        <a class="lien" href="about.html"><b>A propos de nous</b></a>
+                    </nav>
+                </div>
+            </div>
+
+            <!--affichage du nom/prenom et option de deconnexion apres appuie sur le profil (portrait)-->
+            <div class="flex_container" id="lien_profil_2">
+                <span id="x_3">✖</span>
+                <span>Connecter en tant que :</span>
+
+                <div id="nom_prenom_lien_profil_2">
+                    <span><b>Nom</b></span>
+                    <span><b>Prénom</b></span>
+                </div>
+
+                <div class="flex_container" id="flex_container_5">
+                    <nav>
+                        <a class="lien_deconnexion"  href="#"><b>Déconnexion</b></a>
+                        <img id="porte_sortie_2" src="../assets/porte_sortie.png" alt="logo">
+                    </nav>
+                </div>
+            </div>
+
+            <!--affichage de liens secondaire apres appuie du bouton burger (portrait)-->
+            <div class="flex_container" id="lien_burger_1">
+                <span id="x_2">✖</span>
+
+                <nav>
+                    <a class="lien" href="stat.html"><b>Statistique</b></a>
+                    <a class="lien" href="wishlist.html"><b>Wish list</b></a>
+                    <a class="lien" href="petudiant.html" data-role="admin,pilote" ><b>Étudiant</b></a>
+                    <a class="lien" href="ppilote.html" data-role="admin" ><b>Pilote</b></a>
+                </nav>
+
+                <!--affichage de liens secondaire supplementaire apres appuie du bouton burger (portrait)-->
+                <div class="flex_container" id="lien_burger_3">
+                    <nav>
+                        <a class="lien" href="page entreprise1.1.html"><b>Entreprise</b></a>
+                        <a class="lien" href="offre.html"><b>Offre</b></a>
+                        <a class="lien" href="about.html"><b>A propos de nous</b></a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+<!-- Barre de recherche et filtres -->
+<section class="filters">
+    <input type="text" id="recherche-nom" placeholder="Rechercher une entreprise...">
+    <select id="filtre-domaine">
+        <option value="">Choisissez un Domaine</option>
+        <option>BTP</option>
+        <option>S3E</option>
+        <option>Généraliste</option>
+        <option>Informatique</option>
+        <option>Énergie</option>
+    </select>
+    <select id="filtre-niveau">
+        <option value="">Choisissez un niv d'étude</option>
+        <option>Bac +1</option>
+        <option>Bac +2</option>
+        <option>Bac +3</option>
+        <option>Bac +4</option>
+        <option>Bac +5</option>
+    </select>
+    <select id="filtre-duree">
+        <option value="">Choisissez une durée</option>
+        <option>1 semaine</option>
+        <option>2 semaines</option>
+        <option>3 semaines</option>
+        <option>1 mois</option>
+        <option>2 mois</option>
+        <option>3 mois</option>
+        <option>4 mois</option>
+        <option>5 mois</option>
+        <option>6 mois</option>
+    </select>
+    <select id="filtre-rang">
+        <option value="">Rang</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+    
+    <!-- Le bouton rechercher -->
+    <button id="btn-rechercher">Rechercher</button>
+    <button id="btn-reset" style="margin-left: 10px;">Réinitialiser</button>
+
+</section>
+
+<section class="statistiques-tableau">
+    <h2>Statistiques des entreprises</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nom de l'entreprise</th>
+                <th>Rang</th>
+                <th>Nombre de stagiaires</th>
+                <th>Nombre d'alternants</th>
+                <th>Domaine</th>
+                <th>Durée</th>
+                <th>Niveau d'étude</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Capgemini</td>
+                <td>1</td>
+                <td>20</td>
+                <td>35</td>
+                <td>Informatique</td>
+                <td>6 mois</td>
+                <td>bac +5</td>
+                
+            </tr>
+            <tr>
+                <td>Bouygues Construction</td>
+                <td>2</td>
+                <td>18</td>
+                <td>30</td>
+                <td>BTP</td>
+                <td>4 mois</td>
+                <td>bac+2</td>
+            </tr>
+            <tr>
+                <td>EDF</td>
+                <td>3</td>
+                <td>15</td>
+                <td>28</td>
+                <td>Énergie</td>
+                <td>2 semaines</td>
+                <td>bac+1</td>
+            </tr>
+            <tr>
+                <td>Sopra Steria</td>
+                <td>4</td>
+                <td>10</td>
+                <td>22</td>
+                <td>Informatique</td>
+                <td>3 mois</td>
+                <td>bac+2</td>
+            </tr>
+            <tr>
+                <td>ENGIE</td>
+                <td>5</td>
+                <td>8</td>
+                <td>20</td>
+                <td>Énergie</td>
+                <td>2 mois</td>
+                <td>bac+4</td>
+            </tr>
+            <tr>
+                <td>VINCI Energies</td>
+                <td>6</td>
+                <td>12</td>
+                <td>25</td>
+                <td>S3E</td>
+                <td>6 mois</td>
+                <td>Bac +4</td>
+            </tr>
+            <tr>
+                <td>Dassault Systèmes</td>
+                <td>7</td>
+                <td>14</td>
+                <td>27</td>
+                <td>Informatique</td>
+                <td>3 mois</td>
+                <td>Bac +5</td>
+            </tr>
+            <tr>
+                <td>SPIE</td>
+                <td>8</td>
+                <td>10</td>
+                <td>20</td>
+                <td>S3E</td>
+                <td>2 mois</td>
+                <td>Bac +2</td>
+            </tr>
+            <tr>
+                <td>ENEDIS</td>
+                <td>9</td>
+                <td>8</td>
+                <td>18</td>
+                <td>Énergie</td>
+                <td>1 mois</td>
+                <td>Bac +1</td>
+            </tr>
+            <tr>
+                <td>Orange</td>
+                <td>10</td>
+                <td>15</td>
+                <td>32</td>
+                <td>Informatique</td>
+                <td>5 mois</td>
+                <td>Bac +4</td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+    <canvas id="graph-duree" width="600" height="400" style="margin: 50px auto; display: block;"></canvas>
+    
+   <p id="aucun-resultat" style="display: none; color: red; text-align: center;">
+    Aucun résultat ne correspond à votre recherche.
+    </p>
+
+</section>
+
+
+    <footer>
+        <div class="footer">
+            <div class="footer-links">
+                <a href="../../index.html">Accueil</a>
+                <a href="offre.html"> Offres</a>
+                <a href="page entreprise1.1.html"> Entreprises </a>
+                <a href="about.html"> A propos</a>
+                <a href="contact.html">Nous contacter</a>
+                <a href="cgu.html">Mentions légales</a>
+                <a href="newsletter.html">Newsletter</a>
+            </div>
+            <ul id="footer-links-list" class="footer-links-list">
+                <li><a href="../../index.html">Accueil</a></li>
+                <li><a href="offre.html">Offres</a></li>
+                <li><a href="page entreprise1.1.html">Entreprises</a></li>
+                <li><a href="about.html">A propos</a></li>
+                <li><a href="contact.html">Nous contacter</a></li>
+                <li><a href="cgu.html">Mentions légales</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+            </ul>
+            <div class="social-media">
+                <a href="#"><img src="../assets/eth.png" alt="CESI Ta Chance Web 3"></a>
+                <a href="#"><img src="../assets/twitter.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/cesi_ta_chance/"><img src="../assets/instagram.png" alt="Instagram"></a>
+            </div>
+            <p class="copyright"> <span class="cr"> &copy </span> CESI Ta Chance - 2025 Tous droits réservés.</p>
+        </div>
+    </footer>    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+    let chartDuree;
+    
+    function convertirDureeEnJours(texte) {
+        texte = texte.toLowerCase().trim();
+        if (texte.includes("mois")) return parseInt(texte) * 30;
+        if (texte.includes("semaine")) return parseInt(texte) * 7;
+        if (texte.includes("jour")) return parseInt(texte);
+        return 0;
+    }
+    
+    function mettreAJourGraphique() {
+        const lignes = document.querySelectorAll(".statistiques-tableau tbody tr");
+        const labels = [];
+        const data = [];
+    
+        lignes.forEach(ligne => {
+            if (ligne.style.display !== "none") {
+                const nom = ligne.cells[0].textContent.trim();
+                const dureeTexte = ligne.cells[5].textContent.trim();
+                const dureeJours = convertirDureeEnJours(dureeTexte);
+                labels.push(nom);
+                data.push(dureeJours);
+            }
+        });
+    
+        if (chartDuree) {
+            chartDuree.data.labels = labels;
+            chartDuree.data.datasets[0].data = data;
+            chartDuree.update();
+        } else {
+            const ctx = document.getElementById("graph-duree").getContext("2d");
+            chartDuree = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Durée moyenne (en jours)',
+                        data: data,
+                        backgroundColor: 'rgba(15, 82, 125, 0.7)',
+                        borderColor: 'rgba(15, 82, 125, 1)',
+                        borderWidth: 1,
+                        borderRadius: 10
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: ctx => `${ctx.raw} jours`
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: "Durée en jours"
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    }
+    
+    document.addEventListener("DOMContentLoaded", () => {
+        const filtreDomaine = document.getElementById("filtre-domaine");
+        const filtreNiveau = document.getElementById("filtre-niveau");
+        const filtreDuree = document.getElementById("filtre-duree");
+        const filtreRang = document.getElementById("filtre-rang");
+        const rechercheNom = document.getElementById("recherche-nom");
+        const boutonRechercher = document.getElementById("btn-rechercher");
+        const boutonReset = document.getElementById("btn-reset");
+        const lignes = document.querySelectorAll(".statistiques-tableau tbody tr");
+        const aucunResultat = document.getElementById("aucun-resultat");
+    
+        const filtrer = () => {
+            const domaine = filtreDomaine.value.toLowerCase().trim();
+            const niveau = filtreNiveau.value.toLowerCase().trim();
+            const duree = filtreDuree.value.toLowerCase().trim();
+            const rang = filtreRang.value.trim();
+            const nomRecherche = rechercheNom.value.toLowerCase().trim();
+    
+            let totalVisible = 0;
+    
+            lignes.forEach(ligne => {
+                const celluleNom = ligne.cells[0].textContent.toLowerCase().trim();
+                const celluleRang = ligne.cells[1].textContent.trim();
+                const celluleStagiaire = ligne.cells[2].textContent.trim();
+                const celluleAlternant = ligne.cells[3].textContent.trim();
+                const celluleDomaine = ligne.cells[4].textContent.toLowerCase().trim();
+                const celluleDuree = ligne.cells[5].textContent.toLowerCase().trim();
+                const celluleNiveau = ligne.cells[6].textContent.toLowerCase().trim();
+    
+                const matchNom = nomRecherche === "" || celluleNom.includes(nomRecherche);
+                const matchDomaine = domaine === "" || celluleDomaine.includes(domaine);
+                const matchRang = rang === "" || celluleRang === rang;
+                const matchDuree = duree === "" || celluleDuree.includes(duree);
+                const matchNiveau = niveau === "" || celluleNiveau.includes(niveau);
+    
+                const visible = matchNom && matchDomaine && matchRang && matchDuree && matchNiveau;
+                ligne.style.display = visible ? "" : "none";
+                if (visible) totalVisible++;
+            });
+    
+            aucunResultat.style.display = totalVisible === 0 ? "block" : "none";
+    
+            // Sauvegarde dans localStorage
+            localStorage.setItem("filtreDomaine", filtreDomaine.value);
+            localStorage.setItem("filtreNiveau", filtreNiveau.value);
+            localStorage.setItem("filtreDuree", filtreDuree.value);
+            localStorage.setItem("filtreRang", filtreRang.value);
+            localStorage.setItem("rechercheNom", rechercheNom.value);
+        };
+    
+        const reinitialiserFiltres = () => {
+            filtreDomaine.value = "";
+            filtreNiveau.value = "";
+            filtreDuree.value = "";
+            filtreRang.value = "";
+            rechercheNom.value = "";
+    
+            lignes.forEach(tr => tr.style.display = "");
+            aucunResultat.style.display = "none";
+    
+            localStorage.clear();
+            mettreAJourGraphique();
+        };
+    
+        boutonRechercher.addEventListener("click", () => {
+            filtrer();
+            mettreAJourGraphique();
+        });
+    
+        boutonReset.addEventListener("click", () => {
+            reinitialiserFiltres();
+        });
+    
+        rechercheNom.addEventListener("input", () => {
+            filtrer();
+            mettreAJourGraphique();
+        });
+    
+        // Appliquer les filtres mémorisés
+        if (localStorage.getItem("filtreDomaine")) filtreDomaine.value = localStorage.getItem("filtreDomaine");
+        if (localStorage.getItem("filtreNiveau")) filtreNiveau.value = localStorage.getItem("filtreNiveau");
+        if (localStorage.getItem("filtreDuree")) filtreDuree.value = localStorage.getItem("filtreDuree");
+        if (localStorage.getItem("filtreRang")) filtreRang.value = localStorage.getItem("filtreRang");
+        if (localStorage.getItem("rechercheNom")) rechercheNom.value = localStorage.getItem("rechercheNom");
+    
+        filtrer();
+        mettreAJourGraphique();
+    });
+    </script>
+    
+            
+    </body>
+
+    <script src="../js/en-tete.js"></script>
+    <script src="../js/stat.js"></script>
+    <script src="../js/footer.js"></script>
+
+    </html>

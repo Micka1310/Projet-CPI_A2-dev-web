@@ -1,0 +1,142 @@
+/* Nettoyage de stat.css : uniquement les styles propres à stat.css */
+
+/* Barre de recherche et filtres */
+.filters {
+    background: linear-gradient(to bottom, rgba(255, 255, 125, 0.8) 5%, rgba(255, 183, 0, 1) 70%);
+    padding: 8px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+    margin-top: 11vh;
+  }
+  
+  .filters input,
+  .filters select {
+    padding: 4px 8px;
+    border-radius: 10px;
+    border: 1px solid #aaa;
+    font-size: 12px;
+    width: 160px;
+    min-width: 120px;
+    max-width: 100%;
+  }
+  
+  .filters button {
+    padding: 4px 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #0f527d;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .filters button:hover {
+    background-color: #0d3d5f;
+  }
+  
+  .chart-container {
+    margin-top: 5vh;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+  }
+  
+  .statistiques-tableau {
+    background-color: rgba(255, 255, 255, 0.95);
+    margin: 5vh auto;
+    padding: 4vh;
+    width: 90%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    overflow-x: auto;
+  }
+  
+  .statistiques-tableau h2 {
+    text-align: center;
+    margin-bottom: 3vh;
+    font-size: 3vh;
+    font-family: 'Gelasio', serif;
+    color: #333;
+  }
+  
+  .statistiques-tableau table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 2vh;
+    min-width: 600px; /* évite les colonnes trop serrées */
+  }
+  
+  .statistiques-tableau thead {
+    background-color: #0f527d;
+    color: white;
+  }
+  
+  .statistiques-tableau th,
+  .statistiques-tableau td {
+    padding: 1.5vh;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+  
+  .statistiques-tableau tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .statistiques-tableau tbody tr:hover {
+    background-color: #d0f0ff;
+    transition: 0.3s;
+  }
+  
+  /* Responsive spécifiques stat */
+  
+@media (max-width: 768px) {
+    .filters {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 8px 5px;
+      gap: 6px;
+    }
+  
+    .filters input,
+    .filters select,
+    .filters button {
+      width: 100%;
+      font-size: 11px;
+      padding: 4px 8px;
+    }
+    .statistiques-tableau {
+      padding: 2vh;
+    }
+  
+    .statistiques-tableau h2 {
+      font-size: 2.5vh;
+    }
+  
+    .statistiques-tableau table {
+      font-size: 1.8vh;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .filters input,
+    .filters select,
+    .filters button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .statistiques-tableau h2 {
+      font-size: 2vh;
+    }
+  
+    .statistiques-tableau table {
+      font-size: 1.6vh;
+    }
+  }
+  

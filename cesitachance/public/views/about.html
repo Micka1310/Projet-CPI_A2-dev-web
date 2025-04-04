@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nos Expériences - CESI Ta Chance</title>
+
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style_about.css">
+    <link href="../css/en-tete.css" rel="stylesheet" type="text/css">
+    <link href="../css/footer.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <div id="arriere_plan"></div>
+
+    <!-- Notification - Accès Refusé -->
+    <div id="notification"></div>
+
+    
+
+        <!--En-tête commun à toute les pages-->
+        <header>
+            
+            <!--affichage principal de l'en-tête-->
+            <div class="flex_container" id="flex_container_1">
+                <nav>
+                    <a id="a_logo" href="../../index.html"><img id="logo" src="../assets/logo_2.png" alt="logo"></a>
+                </nav>
+
+                <div class="flex_container" id="flex_container_2">
+                    <nav>
+                        <a class="lien" href="page entreprise1.1.html"><b>Entreprise</b></a>
+                        <a class="lien" href="offre.html"><b>Offre</b></a>
+                        <a class="lien" href="about.html"><b>A propos de nous</b></a>
+                    </nav>
+                </div>
+                
+                <div class="flex_container" id="flex_container_3">
+                    <div class="tooltip" id="profil_1">
+                        <span class="tooltip_text_gauche" id="tooltip_profil">Vous êtes connecté</span>
+                    </div>
+
+                    <div id="modalConnexion" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <iframe src="connexion.html" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+                    <nav>
+                        <a id="connexion" href="connexion.html"><b>Connexion</b></a>
+                    </nav>
+
+                    <p class="tooltip" id="bouton_burger_1"><b>☰</b>
+                        <span class="tooltip_text_gauche" id="tooltip_burger">Liens de navigation</span>
+                    </p>
+                </div>
+            </div>
+
+            <!--affichage du nom/prenom et option de deconnexion apres appuie sur le profil (paysage)-->
+            <div class="flex_container" id="lien_profil_1">
+                <span>Connecter en tant que :</span>
+
+                <div id="nom_prenom_lien_profil_1">
+                    <span><b>Nom</b></span>
+                    <span><b>Prénom</b></span>
+                </div>
+
+                <div class="flex_container" id="flex_container_4">
+                    <nav>
+                        <a class="lien_deconnexion" href="#"><b>Déconnexion</b></a>
+                        <img id="porte_sortie_1" src="../assets/porte_sortie.png" alt="logo">
+                    </nav>
+                </div>
+            </div>
+
+            <!--affichage de liens secondaire apres appuie du bouton burger (paysage)-->
+            <div class="flex_container" id="lien_burger_2">
+                <nav>
+                    <a class="lien" href="stat.html"><b>Statistique</b></a>
+                    <a class="lien" href="wishlist.html"><b>Wish list</b></a>
+                    <a class="lien" href="petudiant.html" data-role="admin,pilote" ><b>Étudiant</b></a>
+                    <a class="lien" href="ppilote.html" data-role="admin" ><b>Pilote</b></a>
+                </nav>
+
+                <!--affichage de liens secondaire supplementaire apres appuie du bouton burger (paysage)-->
+                <div class="flex_container" id="lien_burger_3">
+                    <nav>
+                        <a class="lien" href="page entreprise1.1.html"><b>Entreprise</b></a>
+                        <a class="lien" href="offre.html"><b>Offre</b></a>
+                        <a class="lien" href="about.html"><b>A propos de nous</b></a>
+                    </nav>
+                </div>
+            </div>
+
+            <!--affichage du nom/prenom et option de deconnexion apres appuie sur le profil (portrait)-->
+            <div class="flex_container" id="lien_profil_2">
+                <span id="x_3">✖</span>
+                <span>Connecter en tant que :</span>
+
+                <div id="nom_prenom_lien_profil_2">
+                    <span><b>Nom</b></span>
+                    <span><b>Prénom</b></span>
+                </div>
+
+                <div class="flex_container" id="flex_container_5">
+                    <nav>
+                        <a class="lien_deconnexion"  href="#"><b>Déconnexion</b></a>
+                        <img id="porte_sortie_2" src="../assets/porte_sortie.png" alt="logo">
+                    </nav>
+                </div>
+            </div>
+
+            <!--affichage de liens secondaire apres appuie du bouton burger (portrait)-->
+            <div class="flex_container" id="lien_burger_1">
+                <span id="x_2">✖</span>
+
+                <nav>
+                    <a class="lien" href="stat.html"><b>Statistique</b></a>
+                    <a class="lien" href="wishlist.html"><b>Wish list</b></a>
+                    <a class="lien" href="petudiant.html" data-role="admin,pilote" ><b>Étudiant</b></a>
+                    <a class="lien" href="ppilote.html" data-role="admin" ><b>Pilote</b></a>
+                </nav>
+
+                <!--affichage de liens secondaire supplementaire apres appuie du bouton burger (portrait)-->
+                <div class="flex_container" id="lien_burger_3">
+                    <nav>
+                        <a class="lien" href="page entreprise1.1.html"><b>Entreprise</b></a>
+                        <a class="lien" href="offre.html"><b>Offre</b></a>
+                        <a class="lien" href="about.html"><b>A propos de nous</b></a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+    <div class="video">
+
+        <video width="88vw" height="51vh" controls>
+            <source src="../assets/a_propos.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas ce type de vidéo.
+        </video>
+    
+    </div>
+
+
+    <div class="story">
+        <h1>À propos de CESI Ta Chance</h1>
+        
+        <div class="mission">
+            <h2>Notre Histoire</h2>
+            <p>La recherche de stage est souvent un défi pour les étudiants, marquée par un manque d’opportunités et de visibilité. Conscients de ces difficultés, nous avons conçu <strong>CESI Ta Chance</strong>, une plateforme qui simplifie et optimise la mise en relation entre étudiants et entreprises.</p>
+            <p>Notre initiative est née de l’envie de proposer une solution qui réduit le temps et les efforts nécessaires pour trouver un stage, tout en assurant une meilleure adéquation entre les besoins des recruteurs et les attentes des étudiants.</p>
+        </div>
+        
+        <div class="mission">
+            <h2>Qui sommes-nous ?</h2>
+            <p>Nous sommes une équipe de professionnels du secteur éducatif et technologique, déterminés à innover dans le domaine de l’insertion professionnelle. Avec des parcours variés en entreprise et en formation, nous avons mis nos expertises au service des étudiants du CESI.</p>
+            <p>Notre mission repose sur trois piliers fondamentaux : accessibilité, efficacité et simplicité. Nous avons conçu une plateforme intuitive qui permet aux étudiants de trouver des offres pertinentes en quelques clics.</p>
+        </div>
+        
+        <div class="mission">
+            <h2>Notre Évolution</h2>
+            <p>Depuis notre lancement, nous avons aidé des centaines d’étudiants à décrocher des stages dans divers secteurs d’activité. Grâce aux retours des utilisateurs et des entreprises, nous avons amélioré notre algorithme de mise en relation et enrichi nos services.</p>
+            <p>Nous avons élargi notre réseau de partenaires, collaborant avec de nombreuses entreprises de toutes tailles, afin d’offrir un maximum d’opportunités aux étudiants du CESI.</p>
+        </div>
+        
+        <div class="mission">
+            <h2>Notre Mission et Vision</h2>
+            <p>Nous souhaitons révolutionner la manière dont les étudiants trouvent un stage en leur offrant une expérience fluide, rapide et efficace. Notre ambition est de devenir la plateforme incontournable pour les étudiants du CESI en quête de nouvelles opportunités professionnelles.</p>
+            <p>Nous continuons d’innover en intégrant de nouvelles fonctionnalités et en développant des partenariats stratégiques, afin de rendre la recherche de stage toujours plus performante et accessible.</p>
+        </div>
+    </div>
+    
+ 
+    <footer>
+        <div class="footer">
+            <div class="footer-links">
+                <a href="../../index.html">Accueil</a>
+                <a href="offre.html"> Offres</a>
+                <a href="page entreprise1.1.html"> Entreprises </a>
+                <a href="about.html"> A propos</a>
+                <a href="contact.html">Nous contacter</a>
+                <a href="cgu.html">Mentions légales</a>
+                <a href="newsletter.html">Newsletter</a>
+            </div>
+            <ul id="footer-links-list" class="footer-links-list">
+                <li><a href="../../index.html">Accueil</a></li>
+                <li><a href="offre.html">Offres</a></li>
+                <li><a href="page entreprise1.1.html">Entreprises</a></li>
+                <li><a href="about.html">A propos</a></li>
+                <li><a href="contact.html">Nous contacter</a></li>
+                <li><a href="cgu.html">Mentions légales</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+            </ul>
+            <div class="social-media">
+                <a href="#"><img src="../assets/eth.png" alt="CESI Ta Chance Web 3"></a>
+                <a href="#"><img src="../assets/twitter.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/cesi_ta_chance/"><img src="../assets/instagram.png" alt="Instagram"></a>
+            </div>
+            <p class="copyright"> <span class="cr"> &copy </span> CESI Ta Chance - 2025 Tous droits réservés.</p>
+        </div>
+    </footer> 
+
+
+</body>
+</html>
+
+<script src="../js/about.js"></script>
+<script src="../js/en-tete.js"></script>
+<script src="../js/footer.js"></script>
